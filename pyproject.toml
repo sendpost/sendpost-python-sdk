@@ -2,8 +2,8 @@
 name = "sendpost-python-sdk"
 version = "2.0.0"
 description = "SendPost API"
-authors = ["Sendpost Dev Team <dev@sendpost.io>"]
-license = "MIT"
+authors = ["OpenAPI Generator Community <team@openapitools.org>"]
+license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/sendpost/sendpost-python-sdk"
 keywords = ["OpenAPI", "OpenAPI-Generator", "SendPost API"]
