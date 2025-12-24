@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.ip_pool_create_request import IPPoolCreateRequest
+from sendpost-python-sdk.models.ip_pool_create_request import IPPoolCreateRequest
 
 class TestIPPoolCreateRequest(unittest.TestCase):
     """IPPoolCreateRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestIPPoolCreateRequest(unittest.TestCase):
             return IPPoolCreateRequest(
                 name = 'Marketing Promotional',
                 ips = [
-                    sendpost_python_sdk.models.eip.EIP(
+                    sendpost-python-sdk.models.eip.EIP(
                         public_ip = '52.13.11.14', )
                     ],
                 tpsps = [1],

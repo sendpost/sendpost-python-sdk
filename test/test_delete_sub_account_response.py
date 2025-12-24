@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.delete_sub_account_response import DeleteSubAccountResponse
+from sendpost-python-sdk.models.delete_sub_account_response import DeleteSubAccountResponse
 
 class TestDeleteSubAccountResponse(unittest.TestCase):
     """DeleteSubAccountResponse unit test stubs"""

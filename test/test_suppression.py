@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.suppression import Suppression
+from sendpost-python-sdk.models.suppression import Suppression
 
 class TestSuppression(unittest.TestCase):
     """Suppression unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.api.ip_pools_api import IPPoolsApi
+from sendpost-python-sdk.api.ip_pools_api import IPPoolsApi
 
 
 class TestIPPoolsApi(unittest.TestCase):

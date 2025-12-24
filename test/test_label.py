@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.label import Label
+from sendpost-python-sdk.models.label import Label
 
 class TestLabel(unittest.TestCase):
     """Label unit test stubs"""

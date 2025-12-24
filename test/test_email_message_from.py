@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.email_message_from import EmailMessageFrom
+from sendpost-python-sdk.models.email_message_from import EmailMessageFrom
 
 class TestEmailMessageFrom(unittest.TestCase):
     """EmailMessageFrom unit test stubs"""

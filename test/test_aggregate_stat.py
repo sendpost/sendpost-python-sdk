@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.aggregate_stat import AggregateStat
+from sendpost-python-sdk.models.aggregate_stat import AggregateStat
 
 class TestAggregateStat(unittest.TestCase):
     """AggregateStat unit test stubs"""

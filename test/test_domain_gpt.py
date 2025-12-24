@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.domain_gpt import DomainGpt
+from sendpost-python-sdk.models.domain_gpt import DomainGpt
 
 class TestDomainGpt(unittest.TestCase):
     """DomainGpt unit test stubs"""

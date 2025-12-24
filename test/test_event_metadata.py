@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.event_metadata import EventMetadata
+from sendpost-python-sdk.models.event_metadata import EventMetadata
 
 class TestEventMetadata(unittest.TestCase):
     """EventMetadata unit test stubs"""
@@ -37,20 +37,20 @@ class TestEventMetadata(unittest.TestCase):
             return EventMetadata(
                 smtp_code = 200,
                 smtp_description = 'email delivered successfully',
-                user_agent = sendpost_python_sdk.models.user_agent.UserAgent(
+                user_agent = sendpost-python-sdk.models.user_agent.UserAgent(
                     family = 'Mozilla', 
                     major = '5.0', 
                     minor = '0', 
                     patch = '0', ),
-                os = sendpost_python_sdk.models.operating_system.OperatingSystem(
+                os = sendpost-python-sdk.models.operating_system.OperatingSystem(
                     family = 'Windows', 
                     major = '10', 
                     minor = '0', 
                     patch = '0', 
                     patch_minor = '0', ),
-                device = sendpost_python_sdk.models.device.Device(
+                device = sendpost-python-sdk.models.device.Device(
                     family = '', ),
-                geo = sendpost_python_sdk.models.geo_location.GeoLocation(
+                geo = sendpost-python-sdk.models.geo_location.GeoLocation(
                     city_id = '123', 
                     continent_code = 'EU', 
                     country_code = 'US', 

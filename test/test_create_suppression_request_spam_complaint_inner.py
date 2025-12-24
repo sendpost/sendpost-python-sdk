@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.create_suppression_request_spam_complaint_inner import CreateSuppressionRequestSpamComplaintInner
+from sendpost-python-sdk.models.create_suppression_request_spam_complaint_inner import CreateSuppressionRequestSpamComplaintInner
 
 class TestCreateSuppressionRequestSpamComplaintInner(unittest.TestCase):
     """CreateSuppressionRequestSpamComplaintInner unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.smtp_auth import SMTPAuth
+from sendpost-python-sdk.models.smtp_auth import SMTPAuth
 
 class TestSMTPAuth(unittest.TestCase):
     """SMTPAuth unit test stubs"""

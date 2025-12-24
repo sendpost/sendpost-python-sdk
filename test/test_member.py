@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.member import Member
+from sendpost-python-sdk.models.member import Member
 
 class TestMember(unittest.TestCase):
     """Member unit test stubs"""

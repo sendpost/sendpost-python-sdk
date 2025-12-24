@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.api.suppression_api import SuppressionApi
+from sendpost-python-sdk.api.suppression_api import SuppressionApi
 
 
 class TestSuppressionApi(unittest.TestCase):

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.webhook import Webhook
+from sendpost-python-sdk.models.webhook import Webhook
 
 class TestWebhook(unittest.TestCase):
     """Webhook unit test stubs"""
@@ -52,32 +52,8 @@ class TestWebhook(unittest.TestCase):
                 unique_open = True,
                 unique_click = True,
                 created = 1567512491588004044,
-                created_by = sendpost_python_sdk.models.member.Member(
-                    id = 117, 
-                    is_verified = True, 
-                    is_forbidden = False, 
-                    firebase_uid = '1234567890', 
-                    email = 'raj@piedpiper.com', 
-                    name = 'Raj', 
-                    url = 'https://www.sendpost.io/logo.png', 
-                    company_name = 'SendPost', 
-                    onboard_q_answered = True, 
-                    phone_number = '+919876543210', 
-                    notes_color = '#000000', 
-                    created = 1567512491588004044, ),
-                updated_by = sendpost_python_sdk.models.member.Member(
-                    id = 117, 
-                    is_verified = True, 
-                    is_forbidden = False, 
-                    firebase_uid = '1234567890', 
-                    email = 'raj@piedpiper.com', 
-                    name = 'Raj', 
-                    url = 'https://www.sendpost.io/logo.png', 
-                    company_name = 'SendPost', 
-                    onboard_q_answered = True, 
-                    phone_number = '+919876543210', 
-                    notes_color = '#000000', 
-                    created = 1567512491588004044, )
+                created_by = { },
+                updated_by = { }
             )
         else:
             return Webhook(

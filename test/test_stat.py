@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.stat import Stat
+from sendpost-python-sdk.models.stat import Stat
 
 class TestStat(unittest.TestCase):
     """Stat unit test stubs"""
@@ -36,7 +36,7 @@ class TestStat(unittest.TestCase):
         if include_optional:
             return Stat(
                 var_date = '2020-03-12',
-                stats = sendpost_python_sdk.models.stat_stats.Stat_stats(
+                stats = sendpost-python-sdk.models.stat_stats.Stat_stats(
                     processed = 225, 
                     sent = 220, 
                     delivered = 200, 

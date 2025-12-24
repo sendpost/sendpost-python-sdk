@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.event import Event
+from sendpost-python-sdk.models.event import Event
 
 class TestEvent(unittest.TestCase):
     """Event unit test stubs"""
@@ -36,7 +36,7 @@ class TestEvent(unittest.TestCase):
         if include_optional:
             return Event(
                 event_id = 'edhg-123gh-afasdf-124egh',
-                groups = [transactional, user-onboarding],
+                groups = ["transactional","user-onboarding"],
                 ip_id = 123,
                 ip_pool_id = 123,
                 domain_id = 123,
@@ -54,23 +54,23 @@ class TestEvent(unittest.TestCase):
                 submitted_at = 1567512491587205024,
                 smtp_code = 200,
                 smtp_description = 'email delivered successfully',
-                event_metadata = sendpost_python_sdk.models.event_metadata.EventMetadata(
+                event_metadata = sendpost-python-sdk.models.event_metadata.EventMetadata(
                     smtp_code = 200, 
                     smtp_description = 'email delivered successfully', 
-                    user_agent = sendpost_python_sdk.models.user_agent.UserAgent(
+                    user_agent = sendpost-python-sdk.models.user_agent.UserAgent(
                         family = 'Mozilla', 
                         major = '5.0', 
                         minor = '0', 
                         patch = '0', ), 
-                    os = sendpost_python_sdk.models.operating_system.OperatingSystem(
+                    os = sendpost-python-sdk.models.operating_system.OperatingSystem(
                         family = 'Windows', 
                         major = '10', 
                         minor = '0', 
                         patch = '0', 
                         patch_minor = '0', ), 
-                    device = sendpost_python_sdk.models.device.Device(
+                    device = sendpost-python-sdk.models.device.Device(
                         family = '', ), 
-                    geo = sendpost_python_sdk.models.geo_location.GeoLocation(
+                    geo = sendpost-python-sdk.models.geo_location.GeoLocation(
                         city_id = '123', 
                         continent_code = 'EU', 
                         country_code = 'US', 

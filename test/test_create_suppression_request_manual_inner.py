@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.create_suppression_request_manual_inner import CreateSuppressionRequestManualInner
+from sendpost-python-sdk.models.create_suppression_request_manual_inner import CreateSuppressionRequestManualInner
 
 class TestCreateSuppressionRequestManualInner(unittest.TestCase):
     """CreateSuppressionRequestManualInner unit test stubs"""

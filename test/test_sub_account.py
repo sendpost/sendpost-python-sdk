@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.sub_account import SubAccount
+from sendpost-python-sdk.models.sub_account import SubAccount
 
 class TestSubAccount(unittest.TestCase):
     """SubAccount unit test stubs"""
@@ -40,7 +40,7 @@ class TestSubAccount(unittest.TestCase):
                 name = 'API',
                 labels = [],
                 smtp_auths = [
-                    sendpost_python_sdk.models.smtp_auth.SMTPAuth(
+                    sendpost-python-sdk.models.smtp_auth.SMTPAuth(
                         id = 117, 
                         username = 'default@117.sendpost.io', 
                         password = 'default@117.sendpost.io', 
@@ -50,32 +50,8 @@ class TestSubAccount(unittest.TestCase):
                 type = 1,
                 is_plus = False,
                 created = 1733844681120384500,
-                created_by = sendpost_python_sdk.models.member.Member(
-                    id = 117, 
-                    is_verified = True, 
-                    is_forbidden = False, 
-                    firebase_uid = '1234567890', 
-                    email = 'raj@piedpiper.com', 
-                    name = 'Raj', 
-                    url = 'https://www.sendpost.io/logo.png', 
-                    company_name = 'SendPost', 
-                    onboard_q_answered = True, 
-                    phone_number = '+919876543210', 
-                    notes_color = '#000000', 
-                    created = 1567512491588004044, ),
-                updated_by = sendpost_python_sdk.models.member.Member(
-                    id = 117, 
-                    is_verified = True, 
-                    is_forbidden = False, 
-                    firebase_uid = '1234567890', 
-                    email = 'raj@piedpiper.com', 
-                    name = 'Raj', 
-                    url = 'https://www.sendpost.io/logo.png', 
-                    company_name = 'SendPost', 
-                    onboard_q_answered = True, 
-                    phone_number = '+919876543210', 
-                    notes_color = '#000000', 
-                    created = 1567512491588004044, ),
+                created_by = { },
+                updated_by = { },
                 blocked = False,
                 blocked_at = 0,
                 block_reason = '',

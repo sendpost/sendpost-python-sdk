@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.eip import EIP
+from sendpost-python-sdk.models.eip import EIP
 
 class TestEIP(unittest.TestCase):
     """EIP unit test stubs"""

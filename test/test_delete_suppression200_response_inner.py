@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.delete_suppression200_response_inner import DeleteSuppression200ResponseInner
+from sendpost-python-sdk.models.delete_suppression200_response_inner import DeleteSuppression200ResponseInner
 
 class TestDeleteSuppression200ResponseInner(unittest.TestCase):
     """DeleteSuppression200ResponseInner unit test stubs"""

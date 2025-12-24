@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.create_sub_account_request import CreateSubAccountRequest
+from sendpost-python-sdk.models.create_sub_account_request import CreateSubAccountRequest
 
 class TestCreateSubAccountRequest(unittest.TestCase):
     """CreateSubAccountRequest unit test stubs"""

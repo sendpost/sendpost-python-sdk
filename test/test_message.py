@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.message import Message
+from sendpost-python-sdk.models.message import Message
 
 class TestMessage(unittest.TestCase):
     """Message unit test stubs"""
@@ -44,19 +44,19 @@ class TestMessage(unittest.TestCase):
                 local_ip = '10.1.0.195',
                 email_type = 'googleworkspace',
                 submitted_at = 1766396394503841392,
-                var_from = sendpost_python_sdk.models.person.Person(
+                var_from = sendpost-python-sdk.models.person.Person(
                     name = 'PiedPipers', 
                     email = 'team@piedpiper.com', ),
-                reply_to = sendpost_python_sdk.models.person.Person(
+                reply_to = sendpost-python-sdk.models.person.Person(
                     name = 'PiedPipers', 
                     email = 'team@piedpiper.com', ),
-                to = sendpost_python_sdk.models.message_to.Message_to(
+                to = sendpost-python-sdk.models.message_to.Message_to(
                     name = 'Test Recipient', 
                     email = 'aditya@sendx.io', 
                     cc = [], 
                     bcc = [], 
                     custom_fields = {}, ),
-                header_to = sendpost_python_sdk.models.message_header_to.Message_headerTo(
+                header_to = sendpost-python-sdk.models.message_header_to.Message_headerTo(
                     name = 'Test Recipient', 
                     email = 'aditya@sendx.io', 
                     cc = [], 

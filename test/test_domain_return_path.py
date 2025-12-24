@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.domain_return_path import DomainReturnPath
+from sendpost-python-sdk.models.domain_return_path import DomainReturnPath
 
 class TestDomainReturnPath(unittest.TestCase):
     """DomainReturnPath unit test stubs"""

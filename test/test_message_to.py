@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.message_to import MessageTo
+from sendpost-python-sdk.models.message_to import MessageTo
 
 class TestMessageTo(unittest.TestCase):
     """MessageTo unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.user_agent import UserAgent
+from sendpost-python-sdk.models.user_agent import UserAgent
 
 class TestUserAgent(unittest.TestCase):
     """UserAgent unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.api.message_api import MessageApi
+from sendpost-python-sdk.api.message_api import MessageApi
 
 
 class TestMessageApi(unittest.TestCase):

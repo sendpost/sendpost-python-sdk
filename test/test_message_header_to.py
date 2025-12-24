@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.message_header_to import MessageHeaderTo
+from sendpost-python-sdk.models.message_header_to import MessageHeaderTo
 
 class TestMessageHeaderTo(unittest.TestCase):
     """MessageHeaderTo unit test stubs"""

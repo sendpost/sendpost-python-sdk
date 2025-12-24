@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.attachment import Attachment
+from sendpost-python-sdk.models.attachment import Attachment
 
 class TestAttachment(unittest.TestCase):
     """Attachment unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.domain import Domain
+from sendpost-python-sdk.models.domain import Domain
 
 class TestDomain(unittest.TestCase):
     """Domain unit test stubs"""
@@ -37,19 +37,19 @@ class TestDomain(unittest.TestCase):
             return Domain(
                 id = 117,
                 name = 'piedpiper.com',
-                dkim = sendpost_python_sdk.models.domain_dkim.Domain_dkim(
+                dkim = sendpost-python-sdk.models.domain_dkim.Domain_dkim(
                     host = 'sp-dkim._domainkey.example.com', 
                     type = 'TXT', 
                     text_value = 'v=DKIM1;k=rsa;s=email;h=sha256;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDU9T3mqruDth2rHXCqNiPzr4oRbHqcUMkqCA4sTZgK7WrhjzerHVyqNAfq4Tyx9s4Tqj0CVfAuENp9mHFKt9Kow5csxqTeVkBoi5UaonafsDstm39ggxFQhKTlRpRoV+VNE5jU9WYlv3wywv28DY2woKYG6QBM6JPSKN1dYQpR4QIDAQAB', ),
-                return_path = sendpost_python_sdk.models.domain_return_path.Domain_returnPath(
+                return_path = sendpost-python-sdk.models.domain_return_path.Domain_returnPath(
                     host = 'sp-bounces.hooli.com', 
                     type = 'CNAME', 
                     text_value = 'sp.sendpost.email', ),
-                track = sendpost_python_sdk.models.domain_track.Domain_track(
+                track = sendpost-python-sdk.models.domain_track.Domain_track(
                     host = 'track.hooli.com', 
                     type = 'CNAME', 
                     text_value = 'api.sendpost.io', ),
-                dmarc = sendpost_python_sdk.models.domain_dmarc.Domain_dmarc(
+                dmarc = sendpost-python-sdk.models.domain_dmarc.Domain_dmarc(
                     host = '_dmarc.hooli.com', 
                     type = 'TXT', 
                     text_value = 'v=DMARC1; p=none;', ),
@@ -62,7 +62,7 @@ class TestDomain(unittest.TestCase):
                 domain_registered_date = '1995-08-14',
                 created = 1766394250613907000,
                 gpt_verified = False,
-                gpt = sendpost_python_sdk.models.domain_gpt.Domain_gpt(
+                gpt = sendpost-python-sdk.models.domain_gpt.Domain_gpt(
                     host = 'example.com', 
                     type = 'TXT', 
                     text_value = '', ),

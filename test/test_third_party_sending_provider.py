@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.third_party_sending_provider import ThirdPartySendingProvider
+from sendpost-python-sdk.models.third_party_sending_provider import ThirdPartySendingProvider
 
 class TestThirdPartySendingProvider(unittest.TestCase):
     """ThirdPartySendingProvider unit test stubs"""

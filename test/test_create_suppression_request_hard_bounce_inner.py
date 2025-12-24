@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.create_suppression_request_hard_bounce_inner import CreateSuppressionRequestHardBounceInner
+from sendpost-python-sdk.models.create_suppression_request_hard_bounce_inner import CreateSuppressionRequestHardBounceInner
 
 class TestCreateSuppressionRequestHardBounceInner(unittest.TestCase):
     """CreateSuppressionRequestHardBounceInner unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost_python_sdk.models.ip_allocation_request import IPAllocationRequest
+from sendpost-python-sdk.models.ip_allocation_request import IPAllocationRequest
 
 class TestIPAllocationRequest(unittest.TestCase):
     """IPAllocationRequest unit test stubs"""
