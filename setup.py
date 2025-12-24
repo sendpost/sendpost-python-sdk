@@ -20,7 +20,7 @@ from setuptools import setup, find_packages  # noqa: H301
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "sendpost"
+NAME = "sendpost-python-sdk"
 VERSION = "2.0.0"
 PYTHON_REQUIRES = ">= 3.9"
 REQUIRES = [
