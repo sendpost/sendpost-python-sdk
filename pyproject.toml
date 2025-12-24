@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "sendpost_python_sdk"
-version = "0.0.1"
+name = "sendpost-python-sdk"
+version = "2.0.0"
 description = "SendPost API"
 authors = ["Sendpost Dev Team <dev@sendpost.io>"]
 license = "MIT"
