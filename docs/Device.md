@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.device import Device
+from sendpost_python_sdk.models.device import Device
 
 # TODO update the JSON string below
 json = "{}"

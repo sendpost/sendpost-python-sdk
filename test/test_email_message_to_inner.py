@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.email_message_to_inner import EmailMessageToInner
+from sendpost_python_sdk.models.email_message_to_inner import EmailMessageToInner
 
 class TestEmailMessageToInner(unittest.TestCase):
     """EmailMessageToInner unit test stubs"""
@@ -39,13 +39,13 @@ class TestEmailMessageToInner(unittest.TestCase):
                 email = 'gavin@hooli.com',
                 custom_fields = {"Company":"Hooli"},
                 cc = [
-                    sendpost-python-sdk.models.email_message_to_inner_cc_inner.EmailMessage_to_inner_cc_inner(
+                    sendpost_python_sdk.models.email_message_to_inner_cc_inner.EmailMessage_to_inner_cc_inner(
                         name = 'Dinesh', 
                         email = 'dinesh@bachmanity.com', 
                         custom_fields = {Company=Hooli}, )
                     ],
                 bcc = [
-                    sendpost-python-sdk.models.email_message_to_inner_bcc_inner.EmailMessage_to_inner_bcc_inner(
+                    sendpost_python_sdk.models.email_message_to_inner_bcc_inner.EmailMessage_to_inner_bcc_inner(
                         name = 'Jian', 
                         email = 'jian@bachmanity.com', 
                         custom_fields = {Company=Hooli}, )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.delete_response import DeleteResponse
+from sendpost_python_sdk.models.delete_response import DeleteResponse
 
 class TestDeleteResponse(unittest.TestCase):
     """DeleteResponse unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.domain_dkim import DomainDkim
+from sendpost_python_sdk.models.domain_dkim import DomainDkim
 
 class TestDomainDkim(unittest.TestCase):
     """DomainDkim unit test stubs"""

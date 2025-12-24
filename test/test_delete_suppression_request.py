@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.delete_suppression_request import DeleteSuppressionRequest
+from sendpost_python_sdk.models.delete_suppression_request import DeleteSuppressionRequest
 
 class TestDeleteSuppressionRequest(unittest.TestCase):
     """DeleteSuppressionRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestDeleteSuppressionRequest(unittest.TestCase):
         if include_optional:
             return DeleteSuppressionRequest(
                 suppressions = [
-                    sendpost-python-sdk.models.create_suppression_request_spam_complaint_inner.createSuppression_request_spamComplaint_inner(
+                    sendpost_python_sdk.models.create_suppression_request_spam_complaint_inner.createSuppression_request_spamComplaint_inner(
                         email = 'gilfoyle@piedpiper.com', )
                     ]
             )

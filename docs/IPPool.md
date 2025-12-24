@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.ip_pool import IPPool
+from sendpost_python_sdk.models.ip_pool import IPPool
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.domain_dmarc import DomainDmarc
+from sendpost_python_sdk.models.domain_dmarc import DomainDmarc
 
 # TODO update the JSON string below
 json = "{}"

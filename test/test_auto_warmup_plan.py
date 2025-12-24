@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.auto_warmup_plan import AutoWarmupPlan
+from sendpost_python_sdk.models.auto_warmup_plan import AutoWarmupPlan
 
 class TestAutoWarmupPlan(unittest.TestCase):
     """AutoWarmupPlan unit test stubs"""

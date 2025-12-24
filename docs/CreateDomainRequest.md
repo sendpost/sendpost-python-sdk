@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.create_domain_request import CreateDomainRequest
+from sendpost_python_sdk.models.create_domain_request import CreateDomainRequest
 
 # TODO update the JSON string below
 json = "{}"

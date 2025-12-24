@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.update_webhook import UpdateWebhook
+from sendpost_python_sdk.models.update_webhook import UpdateWebhook
 
 class TestUpdateWebhook(unittest.TestCase):
     """UpdateWebhook unit test stubs"""

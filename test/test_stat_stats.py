@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.stat_stats import StatStats
+from sendpost_python_sdk.models.stat_stats import StatStats
 
 class TestStatStats(unittest.TestCase):
     """StatStats unit test stubs"""

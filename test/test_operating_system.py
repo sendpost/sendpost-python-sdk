@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.operating_system import OperatingSystem
+from sendpost_python_sdk.models.operating_system import OperatingSystem
 
 class TestOperatingSystem(unittest.TestCase):
     """OperatingSystem unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.api.ip_api import IPApi
+from sendpost_python_sdk.api.ip_api import IPApi
 
 
 class TestIPApi(unittest.TestCase):

@@ -1,4 +1,4 @@
-# sendpost-python-sdk.StatsApi
+# sendpost_python_sdk.StatsApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -22,14 +22,14 @@ Retrieves aggregated email stats for a specific sub-account for a date range.   
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.aggregate_stat import AggregateStat
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.aggregate_stat import AggregateStat
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -45,9 +45,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.StatsApi(api_client)
+    api_instance = sendpost_python_sdk.StatsApi(api_client)
     var_from = '2013-10-20' # date | Start date for stats retrieval.
     to = '2013-10-20' # date | Date to which stats should be retrieved ( Note than from date should be earlier than to date. Also the difference between from and to date shouldn't ne more than 60 days ) 
     subaccount_id = 11 # int | The ID of the subaccount to retrieve
@@ -106,14 +106,14 @@ Retrieves a list of email stats for a specific sub-account within a given date r
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.stat import Stat
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.stat import Stat
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -129,9 +129,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.StatsApi(api_client)
+    api_instance = sendpost_python_sdk.StatsApi(api_client)
     var_from = '2013-10-20' # date | Start date for stats retrieval.
     to = '2013-10-20' # date | Date to which stats should be retrieved ( Note than from date should be earlier than to date. Also the difference between from and to date shouldn't ne more than 60 days ) 
     subaccount_id = 11 # int | The ID of the subaccount to retrieve
@@ -191,14 +191,14 @@ The maximum daterange for which these stats can be retrieved is 366 days. Ensure
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.aggregate_stat import AggregateStat
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.aggregate_stat import AggregateStat
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -214,9 +214,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.StatsApi(api_client)
+    api_instance = sendpost_python_sdk.StatsApi(api_client)
     group = 'group_example' # str | Group whose aggregated stats need to be retrieved
     var_from = '2013-10-20' # date | The starting date for the aggregated stats
     to = '2013-10-20' # date | The ending date for the aggregated stats (Note: `from` should be earlier than `to` and the date range should not exceed 366 days) 

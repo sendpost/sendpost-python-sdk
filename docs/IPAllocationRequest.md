@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.ip_allocation_request import IPAllocationRequest
+from sendpost_python_sdk.models.ip_allocation_request import IPAllocationRequest
 
 # TODO update the JSON string below
 json = "{}"

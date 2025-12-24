@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.api.sub_account_api import SubAccountApi
+from sendpost_python_sdk.api.sub_account_api import SubAccountApi
 
 
 class TestSubAccountApi(unittest.TestCase):

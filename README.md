@@ -514,7 +514,7 @@ pip install git+https://github.com/sendpost/sendpost-python-sdk.git
 
 Then import the package:
 ```python
-import sendpost-python-sdk
+import sendpost_python_sdk
 ```
 
 ### Setuptools
@@ -528,7 +528,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import sendpost-python-sdk
+import sendpost_python_sdk
 ```
 
 ### Tests
@@ -541,13 +541,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 
-import sendpost-python-sdk
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -564,9 +564,9 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.DomainApi(api_client)
+    api_instance = sendpost_python_sdk.DomainApi(api_client)
     limit = 56 # int | Number of records to return per request (optional)
     offset = 56 # int | Number of initial records to skip (optional)
     search = 'search_example' # str | Case insensitive search against domain names (optional)

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.eip import EIP
+from sendpost_python_sdk.models.eip import EIP
 
 # TODO update the JSON string below
 json = "{}"

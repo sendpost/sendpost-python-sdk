@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.domain_dkim import DomainDkim
+from sendpost_python_sdk.models.domain_dkim import DomainDkim
 
 # TODO update the JSON string below
 json = "{}"

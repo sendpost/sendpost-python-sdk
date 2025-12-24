@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.domain_dmarc import DomainDmarc
+from sendpost_python_sdk.models.domain_dmarc import DomainDmarc
 
 class TestDomainDmarc(unittest.TestCase):
     """DomainDmarc unit test stubs"""

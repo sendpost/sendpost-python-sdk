@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.email_message_with_template import EmailMessageWithTemplate
+from sendpost_python_sdk.models.email_message_with_template import EmailMessageWithTemplate
 
 # TODO update the JSON string below
 json = "{}"

@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.update_webhook import UpdateWebhook
+from sendpost_python_sdk.models.update_webhook import UpdateWebhook
 
 # TODO update the JSON string below
 json = "{}"

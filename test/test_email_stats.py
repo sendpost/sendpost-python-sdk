@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.email_stats import EmailStats
+from sendpost_python_sdk.models.email_stats import EmailStats
 
 class TestEmailStats(unittest.TestCase):
     """EmailStats unit test stubs"""
@@ -36,7 +36,7 @@ class TestEmailStats(unittest.TestCase):
         if include_optional:
             return EmailStats(
                 var_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
-                stats = sendpost-python-sdk.models.email_stats_stats.EmailStats_stats(
+                stats = sendpost_python_sdk.models.email_stats_stats.EmailStats_stats(
                     processed = 56, 
                     sent = 56, 
                     delivered = 56, 

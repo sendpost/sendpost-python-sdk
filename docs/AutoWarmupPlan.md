@@ -41,7 +41,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.auto_warmup_plan import AutoWarmupPlan
+from sendpost_python_sdk.models.auto_warmup_plan import AutoWarmupPlan
 
 # TODO update the JSON string below
 json = "{}"

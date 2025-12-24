@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.user_agent import UserAgent
+from sendpost_python_sdk.models.user_agent import UserAgent
 
 # TODO update the JSON string below
 json = "{}"

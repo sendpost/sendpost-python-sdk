@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.email_stats_stats import EmailStatsStats
+from sendpost_python_sdk.models.email_stats_stats import EmailStatsStats
 
 # TODO update the JSON string below
 json = "{}"

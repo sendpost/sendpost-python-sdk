@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.delete_webhook_response import DeleteWebhookResponse
+from sendpost_python_sdk.models.delete_webhook_response import DeleteWebhookResponse
 
 class TestDeleteWebhookResponse(unittest.TestCase):
     """DeleteWebhookResponse unit test stubs"""

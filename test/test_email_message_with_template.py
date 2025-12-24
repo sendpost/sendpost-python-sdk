@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.email_message_with_template import EmailMessageWithTemplate
+from sendpost_python_sdk.models.email_message_with_template import EmailMessageWithTemplate
 
 class TestEmailMessageWithTemplate(unittest.TestCase):
     """EmailMessageWithTemplate unit test stubs"""
@@ -35,24 +35,24 @@ class TestEmailMessageWithTemplate(unittest.TestCase):
         model = EmailMessageWithTemplate()
         if include_optional:
             return EmailMessageWithTemplate(
-                var_from = sendpost-python-sdk.models.email_address.EmailAddress(
+                var_from = sendpost_python_sdk.models.email_address.EmailAddress(
                     email = '', 
                     name = '', ),
-                reply_to = sendpost-python-sdk.models.email_address.EmailAddress(
+                reply_to = sendpost_python_sdk.models.email_address.EmailAddress(
                     email = '', 
                     name = '', ),
                 to = [
-                    sendpost-python-sdk.models.recipient.Recipient(
+                    sendpost_python_sdk.models.recipient.Recipient(
                         email = '', 
                         name = '', 
                         cc = [
-                            sendpost-python-sdk.models.copy_to.CopyTo(
+                            sendpost_python_sdk.models.copy_to.CopyTo(
                                 email = '', 
                                 name = '', 
                                 custom_fields = { }, )
                             ], 
                         bcc = [
-                            sendpost-python-sdk.models.copy_to.CopyTo(
+                            sendpost_python_sdk.models.copy_to.CopyTo(
                                 email = '', 
                                 name = '', )
                             ], 
@@ -73,7 +73,7 @@ class TestEmailMessageWithTemplate(unittest.TestCase):
                     ''
                     ],
                 attachments = [
-                    sendpost-python-sdk.models.attachment.Attachment(
+                    sendpost_python_sdk.models.attachment.Attachment(
                         content = '', 
                         filename = '', )
                     ],

@@ -1,4 +1,4 @@
-# sendpost-python-sdk.WebhookApi
+# sendpost_python_sdk.WebhookApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -23,15 +23,15 @@ Create a new webhook by specifying its properties.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.create_webhook_request import CreateWebhookRequest
-from sendpost-python-sdk.models.webhook import Webhook
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.create_webhook_request import CreateWebhookRequest
+from sendpost_python_sdk.models.webhook import Webhook
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -47,10 +47,10 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.WebhookApi(api_client)
-    create_webhook_request = sendpost-python-sdk.CreateWebhookRequest() # CreateWebhookRequest | 
+    api_instance = sendpost_python_sdk.WebhookApi(api_client)
+    create_webhook_request = sendpost_python_sdk.CreateWebhookRequest() # CreateWebhookRequest | 
 
     try:
         # Create Webhook
@@ -107,14 +107,14 @@ Delete a webhook by its ID.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.delete_webhook_response import DeleteWebhookResponse
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.delete_webhook_response import DeleteWebhookResponse
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -130,9 +130,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.WebhookApi(api_client)
+    api_instance = sendpost_python_sdk.WebhookApi(api_client)
     webhook_id = 117 # int | ID of the webhook to delete.
 
     try:
@@ -186,14 +186,14 @@ Retrieves a list of all webhooks, their endpoints, and the events for which they
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.webhook import Webhook
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.webhook import Webhook
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -209,9 +209,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.WebhookApi(api_client)
+    api_instance = sendpost_python_sdk.WebhookApi(api_client)
     limit = 10 # int | Number of records to return per request. (optional)
     offset = 0 # int | Number of initial records to skip. (optional)
     search = 'hooli' # str | Case insensitive search against webhook URL. (optional)
@@ -269,14 +269,14 @@ Retrieves a specific webhook based on its ID.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.webhook import Webhook
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.webhook import Webhook
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -292,9 +292,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.WebhookApi(api_client)
+    api_instance = sendpost_python_sdk.WebhookApi(api_client)
     webhook_id = 117 # int | The ID of the webhook to retrieve.
 
     try:
@@ -348,15 +348,15 @@ Update the properties of an existing webhook.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.update_webhook import UpdateWebhook
-from sendpost-python-sdk.models.webhook import Webhook
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.update_webhook import UpdateWebhook
+from sendpost_python_sdk.models.webhook import Webhook
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -372,11 +372,11 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.WebhookApi(api_client)
+    api_instance = sendpost_python_sdk.WebhookApi(api_client)
     webhook_id = 117 # int | ID of the webhook to update.
-    update_webhook = sendpost-python-sdk.UpdateWebhook() # UpdateWebhook | 
+    update_webhook = sendpost_python_sdk.UpdateWebhook() # UpdateWebhook | 
 
     try:
         # Update Webhook

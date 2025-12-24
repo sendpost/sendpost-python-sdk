@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.label import Label
+from sendpost_python_sdk.models.label import Label
 
 # TODO update the JSON string below
 json = "{}"

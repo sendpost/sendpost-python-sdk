@@ -1,4 +1,4 @@
-# sendpost-python-sdk.IPPoolsApi
+# sendpost_python_sdk.IPPoolsApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -23,15 +23,15 @@ Creates a new IPPool with the specified name, IPs, and third-party sending provi
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip_pool import IPPool
-from sendpost-python-sdk.models.ip_pool_create_request import IPPoolCreateRequest
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip_pool import IPPool
+from sendpost_python_sdk.models.ip_pool_create_request import IPPoolCreateRequest
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -47,9 +47,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPPoolsApi(api_client)
+    api_instance = sendpost_python_sdk.IPPoolsApi(api_client)
     ip_pool_create_request = {"name":"Marketing Promotional","tpsps":[1],"ips":[{"publicIP":"3.238.19.87"}]} # IPPoolCreateRequest | 
 
     try:
@@ -103,22 +103,22 @@ Delete a specific IPPool based on its ID.
 
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip_pool_delete_response import IPPoolDeleteResponse
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip_pool_delete_response import IPPoolDeleteResponse
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPPoolsApi(api_client)
+    api_instance = sendpost_python_sdk.IPPoolsApi(api_client)
     ippool_id = 756 # int | The ID of the IPPool to delete
 
     try:
@@ -174,14 +174,14 @@ Retrieves a list of all IPPools and information about all IPs contained in that 
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip_pool import IPPool
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip_pool import IPPool
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -197,9 +197,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPPoolsApi(api_client)
+    api_instance = sendpost_python_sdk.IPPoolsApi(api_client)
     limit = 10 # int | Number of records to return per request (optional)
     offset = 0 # int | Number of initial records to skip (optional)
     search = 'Transactional' # str | Case insensitive search against IPPool name (optional)
@@ -258,14 +258,14 @@ Retrieves details of a specific IPPool based on its ID.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip_pool import IPPool
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip_pool import IPPool
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -281,9 +281,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPPoolsApi(api_client)
+    api_instance = sendpost_python_sdk.IPPoolsApi(api_client)
     ippool_id = 74 # int | The ID of the IPPool whose information you want to retrieve
 
     try:
@@ -337,23 +337,23 @@ Update the details of an existing IPPool by its ID.
 
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip_pool import IPPool
-from sendpost-python-sdk.models.ip_pool_update_request import IPPoolUpdateRequest
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip_pool import IPPool
+from sendpost_python_sdk.models.ip_pool_update_request import IPPoolUpdateRequest
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPPoolsApi(api_client)
+    api_instance = sendpost_python_sdk.IPPoolsApi(api_client)
     ippool_id = 756 # int | The ID of the IPPool to update
     ip_pool_update_request = {"name":"Marketing Promotional","ips":[{"publicIP":"52.12.10.12"},{"publicIP":"52.10.12.17"},{"publicIP":"35.11.10.5"}]} # IPPoolUpdateRequest | 
 

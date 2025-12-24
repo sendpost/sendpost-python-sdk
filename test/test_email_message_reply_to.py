@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.email_message_reply_to import EmailMessageReplyTo
+from sendpost_python_sdk.models.email_message_reply_to import EmailMessageReplyTo
 
 class TestEmailMessageReplyTo(unittest.TestCase):
     """EmailMessageReplyTo unit test stubs"""

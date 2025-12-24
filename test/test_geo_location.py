@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.geo_location import GeoLocation
+from sendpost_python_sdk.models.geo_location import GeoLocation
 
 class TestGeoLocation(unittest.TestCase):
     """GeoLocation unit test stubs"""

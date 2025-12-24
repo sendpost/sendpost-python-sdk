@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.event_metadata import EventMetadata
+from sendpost_python_sdk.models.event_metadata import EventMetadata
 
 # TODO update the JSON string below
 json = "{}"

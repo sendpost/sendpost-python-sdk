@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.copy_to import CopyTo
+from sendpost_python_sdk.models.copy_to import CopyTo
 
 # TODO update the JSON string below
 json = "{}"

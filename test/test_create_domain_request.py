@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.create_domain_request import CreateDomainRequest
+from sendpost_python_sdk.models.create_domain_request import CreateDomainRequest
 
 class TestCreateDomainRequest(unittest.TestCase):
     """CreateDomainRequest unit test stubs"""

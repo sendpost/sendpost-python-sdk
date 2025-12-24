@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.ip import IP
+from sendpost_python_sdk.models.ip import IP
 
 # TODO update the JSON string below
 json = "{}"

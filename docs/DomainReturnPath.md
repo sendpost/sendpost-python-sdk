@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.domain_return_path import DomainReturnPath
+from sendpost_python_sdk.models.domain_return_path import DomainReturnPath
 
 # TODO update the JSON string below
 json = "{}"

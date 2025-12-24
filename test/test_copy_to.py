@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.copy_to import CopyTo
+from sendpost_python_sdk.models.copy_to import CopyTo
 
 class TestCopyTo(unittest.TestCase):
     """CopyTo unit test stubs"""

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.update_sub_account import UpdateSubAccount
+from sendpost_python_sdk.models.update_sub_account import UpdateSubAccount
 
 # TODO update the JSON string below
 json = "{}"

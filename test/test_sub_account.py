@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.sub_account import SubAccount
+from sendpost_python_sdk.models.sub_account import SubAccount
 
 class TestSubAccount(unittest.TestCase):
     """SubAccount unit test stubs"""
@@ -40,7 +40,7 @@ class TestSubAccount(unittest.TestCase):
                 name = 'API',
                 labels = [],
                 smtp_auths = [
-                    sendpost-python-sdk.models.smtp_auth.SMTPAuth(
+                    sendpost_python_sdk.models.smtp_auth.SMTPAuth(
                         id = 117, 
                         username = 'default@117.sendpost.io', 
                         password = 'default@117.sendpost.io', 

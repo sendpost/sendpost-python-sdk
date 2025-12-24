@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.create_suppression_request import CreateSuppressionRequest
+from sendpost_python_sdk.models.create_suppression_request import CreateSuppressionRequest
 
 class TestCreateSuppressionRequest(unittest.TestCase):
     """CreateSuppressionRequest unit test stubs"""
@@ -36,19 +36,19 @@ class TestCreateSuppressionRequest(unittest.TestCase):
         if include_optional:
             return CreateSuppressionRequest(
                 hard_bounce = [
-                    sendpost-python-sdk.models.create_suppression_request_hard_bounce_inner.createSuppression_request_hardBounce_inner(
+                    sendpost_python_sdk.models.create_suppression_request_hard_bounce_inner.createSuppression_request_hardBounce_inner(
                         email = 'jackbarker@hooli.com', )
                     ],
                 manual = [
-                    sendpost-python-sdk.models.create_suppression_request_manual_inner.createSuppression_request_manual_inner(
+                    sendpost_python_sdk.models.create_suppression_request_manual_inner.createSuppression_request_manual_inner(
                         email = 'russhannelman@gmail.com', )
                     ],
                 unsubscribe = [
-                    sendpost-python-sdk.models.create_suppression_request_unsubscribe_inner.createSuppression_request_unsubscribe_inner(
+                    sendpost_python_sdk.models.create_suppression_request_unsubscribe_inner.createSuppression_request_unsubscribe_inner(
                         email = 'jared@piedpiper.com', )
                     ],
                 spam_complaint = [
-                    sendpost-python-sdk.models.create_suppression_request_spam_complaint_inner.createSuppression_request_spamComplaint_inner(
+                    sendpost_python_sdk.models.create_suppression_request_spam_complaint_inner.createSuppression_request_spamComplaint_inner(
                         email = 'gilfoyle@piedpiper.com', )
                     ]
             )

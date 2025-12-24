@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.ip_update_request import IPUpdateRequest
+from sendpost_python_sdk.models.ip_update_request import IPUpdateRequest
 
 # TODO update the JSON string below
 json = "{}"

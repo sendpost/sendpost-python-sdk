@@ -1,4 +1,4 @@
-# sendpost-python-sdk.StatsAApi
+# sendpost_python_sdk.StatsAApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -22,14 +22,14 @@ Retrieve aggregated email statistics for all sub-accounts of a specific account 
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.aggregate_stats import AggregateStats
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.aggregate_stats import AggregateStats
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -45,9 +45,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.StatsAApi(api_client)
+    api_instance = sendpost_python_sdk.StatsAApi(api_client)
     var_from = '2019-01-01' # date | The start date for retrieving aggregated stats (inclusive)
     to = '2019-12-31' # date | The end date for retrieving aggregated stats (inclusive). The difference between `from` and `to` should not exceed 366 days.
 
@@ -106,14 +106,14 @@ Gets aggregated email stats for a specific group in all sub-accounts of a specif
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.aggregate_stat import AggregateStat
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.aggregate_stat import AggregateStat
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -129,9 +129,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.StatsAApi(api_client)
+    api_instance = sendpost_python_sdk.StatsAApi(api_client)
     group = 'shopify' # str | Group whose aggregate stats need to be retrieved.
     var_from = '2019-01-01' # date | Date from which stats should be retrieved (should be in the format `YYYY-MM-DD`).
     to = '2019-12-31' # date | Date to which stats should be retrieved (should be in the format `YYYY-MM-DD`). Note that the difference between `from` and `to` should not be more than 366 days.
@@ -191,14 +191,14 @@ Gets a list of all email stats for all sub-accounts of a specific account by gro
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.stat import Stat
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.stat import Stat
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -214,9 +214,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.StatsAApi(api_client)
+    api_instance = sendpost_python_sdk.StatsAApi(api_client)
     group = 'shopify' # str | Group whose stats need to be retrieved
     var_from = '2020-03-12' # date | Date from which stats should be retrieved (should be in the format `YYYY-MM-DD`)
     to = '2020-04-14' # date | Date to which stats should be retrieved (should be in the format `YYYY-MM-DD`). Note that the difference between `from` and `to` should not be more than 31 days.
@@ -276,14 +276,14 @@ Retrieve email statistics for all sub-accounts of a specific account for a given
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.account_stats import AccountStats
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.account_stats import AccountStats
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -299,9 +299,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.StatsAApi(api_client)
+    api_instance = sendpost_python_sdk.StatsAApi(api_client)
     var_from = '2020-03-12' # date | The start date for retrieving stats (inclusive)
     to = '2020-04-14' # date | The end date for retrieving stats (inclusive). The difference between `from` and `to` should not exceed 31 days.
 

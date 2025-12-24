@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.api.stats_api import StatsApi
+from sendpost_python_sdk.api.stats_api import StatsApi
 
 
 class TestStatsApi(unittest.TestCase):

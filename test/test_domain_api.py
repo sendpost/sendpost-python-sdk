@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.api.domain_api import DomainApi
+from sendpost_python_sdk.api.domain_api import DomainApi
 
 
 class TestDomainApi(unittest.TestCase):

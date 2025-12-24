@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.ip_deletion_response import IPDeletionResponse
+from sendpost_python_sdk.models.ip_deletion_response import IPDeletionResponse
 
 # TODO update the JSON string below
 json = "{}"

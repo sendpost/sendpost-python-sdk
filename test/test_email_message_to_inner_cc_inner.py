@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.email_message_to_inner_cc_inner import EmailMessageToInnerCcInner
+from sendpost_python_sdk.models.email_message_to_inner_cc_inner import EmailMessageToInnerCcInner
 
 class TestEmailMessageToInnerCcInner(unittest.TestCase):
     """EmailMessageToInnerCcInner unit test stubs"""

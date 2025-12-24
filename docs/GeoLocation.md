@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.geo_location import GeoLocation
+from sendpost_python_sdk.models.geo_location import GeoLocation
 
 # TODO update the JSON string below
 json = "{}"

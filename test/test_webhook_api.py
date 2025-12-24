@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.api.webhook_api import WebhookApi
+from sendpost_python_sdk.api.webhook_api import WebhookApi
 
 
 class TestWebhookApi(unittest.TestCase):

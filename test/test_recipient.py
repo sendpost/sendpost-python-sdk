@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.recipient import Recipient
+from sendpost_python_sdk.models.recipient import Recipient
 
 class TestRecipient(unittest.TestCase):
     """Recipient unit test stubs"""
@@ -38,13 +38,13 @@ class TestRecipient(unittest.TestCase):
                 email = '',
                 name = '',
                 cc = [
-                    sendpost-python-sdk.models.copy_to.CopyTo(
+                    sendpost_python_sdk.models.copy_to.CopyTo(
                         email = '', 
                         name = '', 
                         custom_fields = { }, )
                     ],
                 bcc = [
-                    sendpost-python-sdk.models.copy_to.CopyTo(
+                    sendpost_python_sdk.models.copy_to.CopyTo(
                         email = '', 
                         name = '', 
                         custom_fields = { }, )

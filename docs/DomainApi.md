@@ -1,4 +1,4 @@
-# sendpost-python-sdk.DomainApi
+# sendpost_python_sdk.DomainApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -23,14 +23,14 @@ Retrieve a list of all domains associated with the sub-account, including their 
 * Api Key Authentication (subAccountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.domain import Domain
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.domain import Domain
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -46,9 +46,9 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['subAccountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.DomainApi(api_client)
+    api_instance = sendpost_python_sdk.DomainApi(api_client)
     limit = 56 # int | Number of records to return per request (optional)
     offset = 56 # int | Number of initial records to skip (optional)
     search = 'search_example' # str | Case insensitive search against domain names (optional)
@@ -106,14 +106,14 @@ Delete a specific domain using its `id`.
 * Api Key Authentication (subAccountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.delete_response import DeleteResponse
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.delete_response import DeleteResponse
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -129,9 +129,9 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['subAccountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.DomainApi(api_client)
+    api_instance = sendpost_python_sdk.DomainApi(api_client)
     domain_id = 'domain_id_example' # str | The unique ID of the domain to delete.
 
     try:
@@ -185,14 +185,14 @@ Retrieve details of a specific domain using its `id`.
 * Api Key Authentication (subAccountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.domain import Domain
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.domain import Domain
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -208,9 +208,9 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['subAccountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.DomainApi(api_client)
+    api_instance = sendpost_python_sdk.DomainApi(api_client)
     domain_id = 'domain_id_example' # str | The unique ID of the domain to retrieve.
 
     try:
@@ -264,15 +264,15 @@ Add a new domain using its `name`.
 * Api Key Authentication (subAccountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.create_domain_request import CreateDomainRequest
-from sendpost-python-sdk.models.domain import Domain
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.create_domain_request import CreateDomainRequest
+from sendpost_python_sdk.models.domain import Domain
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -288,10 +288,10 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['subAccountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.DomainApi(api_client)
-    create_domain_request = sendpost-python-sdk.CreateDomainRequest() # CreateDomainRequest | 
+    api_instance = sendpost_python_sdk.DomainApi(api_client)
+    create_domain_request = sendpost_python_sdk.CreateDomainRequest() # CreateDomainRequest | 
 
     try:
         # Create Domain

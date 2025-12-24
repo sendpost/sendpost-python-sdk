@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.email_message import EmailMessage
+from sendpost_python_sdk.models.email_message import EmailMessage
 
 class TestEmailMessage(unittest.TestCase):
     """EmailMessage unit test stubs"""
@@ -43,25 +43,25 @@ class TestEmailMessage(unittest.TestCase):
                 local_ip = '127.0.0.1',
                 email_type = 'default',
                 submitted_at = 1567512491587205024,
-                var_from = sendpost-python-sdk.models.email_message_from.EmailMessage_from(
+                var_from = sendpost_python_sdk.models.email_message_from.EmailMessage_from(
                     name = 'Richard', 
                     email = 'richard@piedpiper.com', ),
-                reply_to = sendpost-python-sdk.models.email_message_reply_to.EmailMessage_replyTo(
+                reply_to = sendpost_python_sdk.models.email_message_reply_to.EmailMessage_replyTo(
                     name = 'Gavin', 
                     email = 'gavin@hooli.com', ),
                 to = [
-                    sendpost-python-sdk.models.email_message_to_inner.EmailMessage_to_inner(
+                    sendpost_python_sdk.models.email_message_to_inner.EmailMessage_to_inner(
                         name = 'Gavin', 
                         email = 'gavin@hooli.com', 
                         custom_fields = {"Company":"Hooli"}, 
                         cc = [
-                            sendpost-python-sdk.models.email_message_to_inner_cc_inner.EmailMessage_to_inner_cc_inner(
+                            sendpost_python_sdk.models.email_message_to_inner_cc_inner.EmailMessage_to_inner_cc_inner(
                                 name = 'Dinesh', 
                                 email = 'dinesh@bachmanity.com', 
                                 custom_fields = {Company=Hooli}, )
                             ], 
                         bcc = [
-                            sendpost-python-sdk.models.email_message_to_inner_bcc_inner.EmailMessage_to_inner_bcc_inner(
+                            sendpost_python_sdk.models.email_message_to_inner_bcc_inner.EmailMessage_to_inner_bcc_inner(
                                 name = 'Jian', 
                                 email = 'jian@bachmanity.com', 
                                 custom_fields = {Company=Hooli}, )

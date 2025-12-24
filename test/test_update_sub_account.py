@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.update_sub_account import UpdateSubAccount
+from sendpost_python_sdk.models.update_sub_account import UpdateSubAccount
 
 class TestUpdateSubAccount(unittest.TestCase):
     """UpdateSubAccount unit test stubs"""

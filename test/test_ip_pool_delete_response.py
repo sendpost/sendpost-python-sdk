@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.ip_pool_delete_response import IPPoolDeleteResponse
+from sendpost_python_sdk.models.ip_pool_delete_response import IPPoolDeleteResponse
 
 class TestIPPoolDeleteResponse(unittest.TestCase):
     """IPPoolDeleteResponse unit test stubs"""

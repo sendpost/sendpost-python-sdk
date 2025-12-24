@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.create_suppression_request_unsubscribe_inner import CreateSuppressionRequestUnsubscribeInner
+from sendpost_python_sdk.models.create_suppression_request_unsubscribe_inner import CreateSuppressionRequestUnsubscribeInner
 
 class TestCreateSuppressionRequestUnsubscribeInner(unittest.TestCase):
     """CreateSuppressionRequestUnsubscribeInner unit test stubs"""

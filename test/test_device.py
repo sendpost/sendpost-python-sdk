@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.device import Device
+from sendpost_python_sdk.models.device import Device
 
 class TestDevice(unittest.TestCase):
     """Device unit test stubs"""

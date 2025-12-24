@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "sendpost-python-sdk"
+name = "sendpost_python_sdk"
 version = "2.0.0"
 description = "SendPost API"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
@@ -7,7 +7,7 @@ license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/sendpost/sendpost-python-sdk"
 keywords = ["OpenAPI", "OpenAPI-Generator", "SendPost API"]
-include = ["sendpost-python-sdk/py.typed"]
+include = ["sendpost_python_sdk/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -35,7 +35,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "sendpost-python-sdk",
+  "sendpost_python_sdk",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -73,7 +73,7 @@ disallow_any_generics = true
 
 [[tool.mypy.overrides]]
 module = [
-  "sendpost-python-sdk.configuration",
+  "sendpost_python_sdk.configuration",
 ]
 warn_unused_ignores = true
 strict_equality = true

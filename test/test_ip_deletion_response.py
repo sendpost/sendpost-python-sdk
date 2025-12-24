@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.ip_deletion_response import IPDeletionResponse
+from sendpost_python_sdk.models.ip_deletion_response import IPDeletionResponse
 
 class TestIPDeletionResponse(unittest.TestCase):
     """IPDeletionResponse unit test stubs"""

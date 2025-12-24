@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.ip_pool_update_request import IPPoolUpdateRequest
+from sendpost_python_sdk.models.ip_pool_update_request import IPPoolUpdateRequest
 
 class TestIPPoolUpdateRequest(unittest.TestCase):
     """IPPoolUpdateRequest unit test stubs"""

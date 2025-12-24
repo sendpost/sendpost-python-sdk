@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.api.email_api import EmailApi
+from sendpost_python_sdk.api.email_api import EmailApi
 
 
 class TestEmailApi(unittest.TestCase):

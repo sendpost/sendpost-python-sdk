@@ -1,4 +1,4 @@
-# sendpost-python-sdk.IPApi
+# sendpost_python_sdk.IPApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -24,15 +24,15 @@ Allocates a new IP resource to the account.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip import IP
-from sendpost-python-sdk.models.ip_allocation_request import IPAllocationRequest
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip import IP
+from sendpost_python_sdk.models.ip_allocation_request import IPAllocationRequest
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -48,10 +48,10 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPApi(api_client)
-    ip_allocation_request = sendpost-python-sdk.IPAllocationRequest() # IPAllocationRequest | 
+    api_instance = sendpost_python_sdk.IPApi(api_client)
+    ip_allocation_request = sendpost_python_sdk.IPAllocationRequest() # IPAllocationRequest | 
 
     try:
         # Allocate IP
@@ -105,14 +105,14 @@ Deletes a specific IP resource based on the provided IP ID.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip_deletion_response import IPDeletionResponse
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip_deletion_response import IPDeletionResponse
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -128,9 +128,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPApi(api_client)
+    api_instance = sendpost_python_sdk.IPApi(api_client)
     ip_id = 56 # int | The ID of the IP resource to delete
 
     try:
@@ -185,14 +185,14 @@ Retrieves a list of all IPs associated with the main account.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip import IP
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip import IP
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -208,9 +208,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPApi(api_client)
+    api_instance = sendpost_python_sdk.IPApi(api_client)
     limit = 56 # int | Number of records to return per request (optional)
     offset = 56 # int | Number of initial records to skip (optional)
     search = 'search_example' # str | Case insensitive search against IP's public IP address (optional)
@@ -269,14 +269,14 @@ Retrieves detailed information about a specific IP based on the provided ID.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip import IP
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip import IP
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -292,9 +292,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPApi(api_client)
+    api_instance = sendpost_python_sdk.IPApi(api_client)
     ip_id = 56 # int | The ID of the IP resource to retrieve
 
     try:
@@ -349,15 +349,15 @@ Updates an existing IP resource based on the provided IP ID.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.ip import IP
-from sendpost-python-sdk.models.ip_update_request import IPUpdateRequest
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.ip import IP
+from sendpost_python_sdk.models.ip_update_request import IPUpdateRequest
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -373,11 +373,11 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.IPApi(api_client)
+    api_instance = sendpost_python_sdk.IPApi(api_client)
     ip_id = 56 # int | The ID of the IP resource to update
-    ip_update_request = sendpost-python-sdk.IPUpdateRequest() # IPUpdateRequest | 
+    ip_update_request = sendpost_python_sdk.IPUpdateRequest() # IPUpdateRequest | 
 
     try:
         # Update IP

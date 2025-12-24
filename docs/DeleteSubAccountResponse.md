@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost-python-sdk.models.delete_sub_account_response import DeleteSubAccountResponse
+from sendpost_python_sdk.models.delete_sub_account_response import DeleteSubAccountResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.ip_pool import IPPool
+from sendpost_python_sdk.models.ip_pool import IPPool
 
 class TestIPPool(unittest.TestCase):
     """IPPool unit test stubs"""
@@ -39,25 +39,25 @@ class TestIPPool(unittest.TestCase):
                 name = 'Transactional',
                 created = 1597511124804000,
                 ips = [
-                    sendpost-python-sdk.models.ip.IP(
+                    sendpost_python_sdk.models.ip.IP(
                         id = 11321, 
                         public_ip = '52.34.11.12', 
-                        system_domain = sendpost-python-sdk.models.domain.Domain(
+                        system_domain = sendpost_python_sdk.models.domain.Domain(
                             id = 117, 
                             name = 'piedpiper.com', 
-                            dkim = sendpost-python-sdk.models.domain_dkim.Domain_dkim(
+                            dkim = sendpost_python_sdk.models.domain_dkim.Domain_dkim(
                                 host = 'sp-dkim._domainkey.example.com', 
                                 type = 'TXT', 
                                 text_value = 'v=DKIM1;k=rsa;s=email;h=sha256;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDU9T3mqruDth2rHXCqNiPzr4oRbHqcUMkqCA4sTZgK7WrhjzerHVyqNAfq4Tyx9s4Tqj0CVfAuENp9mHFKt9Kow5csxqTeVkBoi5UaonafsDstm39ggxFQhKTlRpRoV+VNE5jU9WYlv3wywv28DY2woKYG6QBM6JPSKN1dYQpR4QIDAQAB', ), 
-                            return_path = sendpost-python-sdk.models.domain_return_path.Domain_returnPath(
+                            return_path = sendpost_python_sdk.models.domain_return_path.Domain_returnPath(
                                 host = 'sp-bounces.hooli.com', 
                                 type = 'CNAME', 
                                 text_value = 'sp.sendpost.email', ), 
-                            track = sendpost-python-sdk.models.domain_track.Domain_track(
+                            track = sendpost_python_sdk.models.domain_track.Domain_track(
                                 host = 'track.hooli.com', 
                                 type = 'CNAME', 
                                 text_value = 'api.sendpost.io', ), 
-                            dmarc = sendpost-python-sdk.models.domain_dmarc.Domain_dmarc(
+                            dmarc = sendpost_python_sdk.models.domain_dmarc.Domain_dmarc(
                                 host = '_dmarc.hooli.com', 
                                 type = 'TXT', 
                                 text_value = 'v=DMARC1; p=none;', ), 
@@ -70,7 +70,7 @@ class TestIPPool(unittest.TestCase):
                             domain_registered_date = '1995-08-14', 
                             created = 1766394250613907000, 
                             gpt_verified = False, 
-                            gpt = sendpost-python-sdk.models.domain_gpt.Domain_gpt(
+                            gpt = sendpost_python_sdk.models.domain_gpt.Domain_gpt(
                                 host = 'example.com', 
                                 type = 'TXT', 
                                 text_value = '', ), 
@@ -97,7 +97,7 @@ class TestIPPool(unittest.TestCase):
                         infra_classification = '', 
                         infra_monitor = True, 
                         state = 1, 
-                        auto_warmup_plan = sendpost-python-sdk.models.auto_warmup_plan.AutoWarmupPlan(
+                        auto_warmup_plan = sendpost_python_sdk.models.auto_warmup_plan.AutoWarmupPlan(
                             id = 742, 
                             name = 'Default Auto Warmup Plan', 
                             gmail_warmup_plan = '', 
@@ -132,7 +132,7 @@ class TestIPPool(unittest.TestCase):
                             warmup_interval = 24, ), )
                     ],
                 third_party_sending_providers = [
-                    sendpost-python-sdk.models.third_party_sending_provider.ThirdPartySendingProvider(
+                    sendpost_python_sdk.models.third_party_sending_provider.ThirdPartySendingProvider(
                         id = 1, 
                         name = 'sendgrid', 
                         type = 1, 

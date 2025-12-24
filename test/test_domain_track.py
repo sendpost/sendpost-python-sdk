@@ -14,7 +14,7 @@
 
 import unittest
 
-from sendpost-python-sdk.models.domain_track import DomainTrack
+from sendpost_python_sdk.models.domain_track import DomainTrack
 
 class TestDomainTrack(unittest.TestCase):
     """DomainTrack unit test stubs"""

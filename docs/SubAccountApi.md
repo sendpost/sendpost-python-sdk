@@ -1,4 +1,4 @@
-# sendpost-python-sdk.SubAccountApi
+# sendpost_python_sdk.SubAccountApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -23,15 +23,15 @@ Creates a new sub-account under the current account.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.create_sub_account_request import CreateSubAccountRequest
-from sendpost-python-sdk.models.sub_account import SubAccount
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.create_sub_account_request import CreateSubAccountRequest
+from sendpost_python_sdk.models.sub_account import SubAccount
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -47,10 +47,10 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.SubAccountApi(api_client)
-    create_sub_account_request = sendpost-python-sdk.CreateSubAccountRequest() # CreateSubAccountRequest | 
+    api_instance = sendpost_python_sdk.SubAccountApi(api_client)
+    create_sub_account_request = sendpost_python_sdk.CreateSubAccountRequest() # CreateSubAccountRequest | 
 
     try:
         # Create Sub-Account
@@ -105,14 +105,14 @@ Deletes a specific sub-account by its ID.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.delete_sub_account_response import DeleteSubAccountResponse
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.delete_sub_account_response import DeleteSubAccountResponse
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -128,9 +128,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.SubAccountApi(api_client)
+    api_instance = sendpost_python_sdk.SubAccountApi(api_client)
     subaccount_id = 12 # int | The ID of the sub-account to delete.
 
     try:
@@ -186,14 +186,14 @@ Retrieves a list of all sub-accounts associated with a specific account.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.sub_account import SubAccount
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.sub_account import SubAccount
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -209,9 +209,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.SubAccountApi(api_client)
+    api_instance = sendpost_python_sdk.SubAccountApi(api_client)
     limit = 10 # int | Number of records to return per request. (optional)
     offset = 0 # int | Number of initial records to skip. (optional)
     search = 'Hooli' # str | Case-insensitive search against the sub-account name. (optional)
@@ -270,14 +270,14 @@ Retrieves a specific sub-account by its ID.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.sub_account import SubAccount
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.sub_account import SubAccount
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -293,9 +293,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.SubAccountApi(api_client)
+    api_instance = sendpost_python_sdk.SubAccountApi(api_client)
     subaccount_id = 11 # int | The ID of the sub-account to retrieve.
 
     try:
@@ -351,15 +351,15 @@ Updates the details of an existing sub-account.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost-python-sdk
-from sendpost-python-sdk.models.sub_account import SubAccount
-from sendpost-python-sdk.models.update_sub_account import UpdateSubAccount
-from sendpost-python-sdk.rest import ApiException
+import sendpost_python_sdk
+from sendpost_python_sdk.models.sub_account import SubAccount
+from sendpost_python_sdk.models.update_sub_account import UpdateSubAccount
+from sendpost_python_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost-python-sdk.Configuration(
+configuration = sendpost_python_sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -375,11 +375,11 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost-python-sdk.ApiClient(configuration) as api_client:
+with sendpost_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost-python-sdk.SubAccountApi(api_client)
+    api_instance = sendpost_python_sdk.SubAccountApi(api_client)
     subaccount_id = 12 # int | The ID of the sub-account to update.
-    update_sub_account = sendpost-python-sdk.UpdateSubAccount() # UpdateSubAccount | 
+    update_sub_account = sendpost_python_sdk.UpdateSubAccount() # UpdateSubAccount | 
 
     try:
         # Update Sub-Account
