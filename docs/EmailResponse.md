@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.email_response import EmailResponse
+from sendpost-python-sdk.models.email_response import EmailResponse
 
 # TODO update the JSON string below
 json = "{}"

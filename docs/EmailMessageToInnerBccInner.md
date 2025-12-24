@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.email_message_to_inner_bcc_inner import EmailMessageToInnerBccInner
+from sendpost-python-sdk.models.email_message_to_inner_bcc_inner import EmailMessageToInnerBccInner
 
 # TODO update the JSON string below
 json = "{}"

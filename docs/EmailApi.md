@@ -1,4 +1,4 @@
-# sendpost_python_sdk.EmailApi
+# sendpost-python-sdk.EmailApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -20,15 +20,15 @@ Use this API to send either a single or batch email.
 * Api Key Authentication (subAccountAuth):
 
 ```python
-import sendpost_python_sdk
-from sendpost_python_sdk.models.email_message_object import EmailMessageObject
-from sendpost_python_sdk.models.email_response import EmailResponse
-from sendpost_python_sdk.rest import ApiException
+import sendpost-python-sdk
+from sendpost-python-sdk.models.email_message_object import EmailMessageObject
+from sendpost-python-sdk.models.email_response import EmailResponse
+from sendpost-python-sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost_python_sdk.Configuration(
+configuration = sendpost-python-sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -44,10 +44,10 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['subAccountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost_python_sdk.ApiClient(configuration) as api_client:
+with sendpost-python-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost_python_sdk.EmailApi(api_client)
-    email_message_object = sendpost_python_sdk.EmailMessageObject() # EmailMessageObject | Email message details
+    api_instance = sendpost-python-sdk.EmailApi(api_client)
+    email_message_object = sendpost-python-sdk.EmailMessageObject() # EmailMessageObject | Email message details
 
     try:
         # Send Email
@@ -101,15 +101,15 @@ Use this API to send an email with a predefined template. This makes it easy to 
 * Api Key Authentication (subAccountAuth):
 
 ```python
-import sendpost_python_sdk
-from sendpost_python_sdk.models.email_message_with_template import EmailMessageWithTemplate
-from sendpost_python_sdk.models.email_response import EmailResponse
-from sendpost_python_sdk.rest import ApiException
+import sendpost-python-sdk
+from sendpost-python-sdk.models.email_message_with_template import EmailMessageWithTemplate
+from sendpost-python-sdk.models.email_response import EmailResponse
+from sendpost-python-sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost_python_sdk.Configuration(
+configuration = sendpost-python-sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -125,10 +125,10 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['subAccountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost_python_sdk.ApiClient(configuration) as api_client:
+with sendpost-python-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost_python_sdk.EmailApi(api_client)
-    email_message_with_template = sendpost_python_sdk.EmailMessageWithTemplate() # EmailMessageWithTemplate | Email message details with template information
+    api_instance = sendpost-python-sdk.EmailApi(api_client)
+    email_message_with_template = sendpost-python-sdk.EmailMessageWithTemplate() # EmailMessageWithTemplate | Email message details with template information
 
     try:
         # Send Email With Template

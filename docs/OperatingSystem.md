@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.operating_system import OperatingSystem
+from sendpost-python-sdk.models.operating_system import OperatingSystem
 
 # TODO update the JSON string below
 json = "{}"

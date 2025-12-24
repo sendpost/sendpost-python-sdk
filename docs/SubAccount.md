@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **id** | **int** | Unique ID for the sub-account. | [optional] 
 **api_key** | **str** | API key for the sub-account. | [optional] 
 **name** | **str** | Name of the sub-account. | [optional] 
-**labels** | **List[str]** | Labels associated with the sub-account | [optional] 
+**labels** | [**List[Label]**](Label.md) | Labels associated with the sub-account | [optional] 
 **smtp_auths** | [**List[SMTPAuth]**](SMTPAuth.md) | SMTP Auths associated with the sub-account | [optional] 
 **type** | **int** | Type of the sub-account | [optional] 
 **is_plus** | **bool** | Indicates whether the sub-account is a Plus sub-account | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.sub_account import SubAccount
+from sendpost-python-sdk.models.sub_account import SubAccount
 
 # TODO update the JSON string below
 json = "{}"

@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.domain import Domain
+from sendpost-python-sdk.models.domain import Domain
 
 # TODO update the JSON string below
 json = "{}"

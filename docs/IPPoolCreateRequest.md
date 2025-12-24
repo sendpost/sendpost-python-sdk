@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.ip_pool_create_request import IPPoolCreateRequest
+from sendpost-python-sdk.models.ip_pool_create_request import IPPoolCreateRequest
 
 # TODO update the JSON string below
 json = "{}"

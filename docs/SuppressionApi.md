@@ -1,4 +1,4 @@
-# sendpost_python_sdk.SuppressionApi
+# sendpost-python-sdk.SuppressionApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -22,15 +22,15 @@ Creates new suppressions by posting to the suppression resource. You can specify
 * Api Key Authentication (subAccountAuth):
 
 ```python
-import sendpost_python_sdk
-from sendpost_python_sdk.models.create_suppression_request import CreateSuppressionRequest
-from sendpost_python_sdk.models.suppression import Suppression
-from sendpost_python_sdk.rest import ApiException
+import sendpost-python-sdk
+from sendpost-python-sdk.models.create_suppression_request import CreateSuppressionRequest
+from sendpost-python-sdk.models.suppression import Suppression
+from sendpost-python-sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost_python_sdk.Configuration(
+configuration = sendpost-python-sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -46,10 +46,10 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['subAccountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost_python_sdk.ApiClient(configuration) as api_client:
+with sendpost-python-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost_python_sdk.SuppressionApi(api_client)
-    create_suppression_request = sendpost_python_sdk.CreateSuppressionRequest() # CreateSuppressionRequest | 
+    api_instance = sendpost-python-sdk.SuppressionApi(api_client)
+    create_suppression_request = sendpost-python-sdk.CreateSuppressionRequest() # CreateSuppressionRequest | 
 
     try:
         # Create Suppressions
@@ -103,15 +103,15 @@ Deletes one or more suppressions for a given sub-account. The request can contai
 * Api Key Authentication (subAccountAuth):
 
 ```python
-import sendpost_python_sdk
-from sendpost_python_sdk.models.delete_suppression200_response_inner import DeleteSuppression200ResponseInner
-from sendpost_python_sdk.models.delete_suppression_request import DeleteSuppressionRequest
-from sendpost_python_sdk.rest import ApiException
+import sendpost-python-sdk
+from sendpost-python-sdk.models.delete_suppression200_response_inner import DeleteSuppression200ResponseInner
+from sendpost-python-sdk.models.delete_suppression_request import DeleteSuppressionRequest
+from sendpost-python-sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost_python_sdk.Configuration(
+configuration = sendpost-python-sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -127,10 +127,10 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['subAccountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost_python_sdk.ApiClient(configuration) as api_client:
+with sendpost-python-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost_python_sdk.SuppressionApi(api_client)
-    delete_suppression_request = sendpost_python_sdk.DeleteSuppressionRequest() # DeleteSuppressionRequest | 
+    api_instance = sendpost-python-sdk.SuppressionApi(api_client)
+    delete_suppression_request = sendpost-python-sdk.DeleteSuppressionRequest() # DeleteSuppressionRequest | 
 
     try:
         # Delete Suppressions
@@ -185,14 +185,14 @@ The maximum difference between `from` and `to` dates should not exceed 60 days.
 * Api Key Authentication (subAccountAuth):
 
 ```python
-import sendpost_python_sdk
-from sendpost_python_sdk.models.suppression import Suppression
-from sendpost_python_sdk.rest import ApiException
+import sendpost-python-sdk
+from sendpost-python-sdk.models.suppression import Suppression
+from sendpost-python-sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost_python_sdk.Configuration(
+configuration = sendpost-python-sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -208,9 +208,9 @@ configuration.api_key['subAccountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['subAccountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost_python_sdk.ApiClient(configuration) as api_client:
+with sendpost-python-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost_python_sdk.SuppressionApi(api_client)
+    api_instance = sendpost-python-sdk.SuppressionApi(api_client)
     var_from = '2013-10-20' # date | Start date for the suppression records
     to = '2013-10-20' # date | End date for the suppression records (Note: `from` should be earlier than `to` and the date range should not exceed 60 days) 
     limit = 20 # int | Number of records to return per request (optional) (default to 20)

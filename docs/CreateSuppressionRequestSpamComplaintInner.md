@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.create_suppression_request_spam_complaint_inner import CreateSuppressionRequestSpamComplaintInner
+from sendpost-python-sdk.models.create_suppression_request_spam_complaint_inner import CreateSuppressionRequestSpamComplaintInner
 
 # TODO update the JSON string below
 json = "{}"

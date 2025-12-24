@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.create_suppression_request_unsubscribe_inner import CreateSuppressionRequestUnsubscribeInner
+from sendpost-python-sdk.models.create_suppression_request_unsubscribe_inner import CreateSuppressionRequestUnsubscribeInner
 
 # TODO update the JSON string below
 json = "{}"

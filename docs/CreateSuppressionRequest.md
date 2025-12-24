@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.create_suppression_request import CreateSuppressionRequest
+from sendpost-python-sdk.models.create_suppression_request import CreateSuppressionRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.create_webhook_request import CreateWebhookRequest
+from sendpost-python-sdk.models.create_webhook_request import CreateWebhookRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -19,6 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from sendpost_python_sdk.models.auto_warmup_plan import AutoWarmupPlan
+from sendpost_python_sdk.models.domain import Domain
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +30,7 @@ class IP(BaseModel):
     """ # noqa: E501
     id: StrictInt = Field(description="Unique ID for the IP")
     public_ip: StrictStr = Field(description="The public IP address associated with the resource", alias="publicIP")
-    system_domain: Optional[Dict[str, Any]] = Field(default=None, description="Details of the system domain associated with the IP", alias="systemDomain")
+    system_domain: Optional[Domain] = Field(default=None, alias="systemDomain")
     reverse_dns_hostname: Optional[StrictStr] = Field(default=None, description="The reverse DNS hostname for the IP", alias="reverseDNSHostname")
     type: Optional[StrictInt] = Field(default=None, description="Type of the IP")
     gmail_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Gmail delivery settings in JSON format", alias="gmailSettings")
@@ -48,7 +50,7 @@ class IP(BaseModel):
     infra_classification: Optional[StrictStr] = Field(default=None, description="Classification of the infrastructure", alias="infraClassification")
     infra_monitor: Optional[StrictBool] = Field(default=None, description="Indicates whether infrastructure monitoring is enabled", alias="infraMonitor")
     state: Optional[StrictInt] = Field(default=None, description="The state of the IP")
-    auto_warmup_plan: Optional[StrictStr] = Field(default=None, description="The auto-warmup plan associated with the IP", alias="autoWarmupPlan")
+    auto_warmup_plan: Optional[AutoWarmupPlan] = Field(default=None, description="The auto-warmup plan associated with the IP. Can be null if no warmup plan is assigned.", alias="autoWarmupPlan")
     __properties: ClassVar[List[str]] = ["id", "publicIP", "systemDomain", "reverseDNSHostname", "type", "gmailSettings", "yahooSettings", "aolSettings", "microsoftSettings", "comcastSettings", "yandexSettings", "gmxSettings", "mailruSettings", "icloudSettings", "zohoSettings", "qqSettings", "defaultSettings", "attSettings", "created", "infraClassification", "infraMonitor", "state", "autoWarmupPlan"]
 
     model_config = ConfigDict(
@@ -93,6 +95,9 @@ class IP(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of system_domain
         if self.system_domain:
             _dict['systemDomain'] = self.system_domain.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of auto_warmup_plan
+        if self.auto_warmup_plan:
+            _dict['autoWarmupPlan'] = self.auto_warmup_plan.to_dict()
         return _dict
 
     @classmethod
@@ -127,7 +132,7 @@ class IP(BaseModel):
             "infraClassification": obj.get("infraClassification"),
             "infraMonitor": obj.get("infraMonitor"),
             "state": obj.get("state"),
-            "autoWarmupPlan": obj.get("autoWarmupPlan")
+            "autoWarmupPlan": AutoWarmupPlan.from_dict(obj["autoWarmupPlan"]) if obj.get("autoWarmupPlan") is not None else None
         })
         return _obj
 

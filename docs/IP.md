@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique ID for the IP | 
 **public_ip** | **str** | The public IP address associated with the resource | 
-**system_domain** | [**Domain**](.md) | Details of the system domain associated with the IP | [optional] 
+**system_domain** | [**Domain**](Domain.md) |  | [optional] 
 **reverse_dns_hostname** | **str** | The reverse DNS hostname for the IP | [optional] 
 **type** | **int** | Type of the IP | [optional] 
 **gmail_settings** | **str** | Configuration for Gmail delivery settings in JSON format | [optional] 
@@ -27,12 +27,12 @@ Name | Type | Description | Notes
 **infra_classification** | **str** | Classification of the infrastructure | [optional] 
 **infra_monitor** | **bool** | Indicates whether infrastructure monitoring is enabled | [optional] 
 **state** | **int** | The state of the IP | [optional] 
-**auto_warmup_plan** | **str** | The auto-warmup plan associated with the IP | [optional] 
+**auto_warmup_plan** | [**AutoWarmupPlan**](AutoWarmupPlan.md) | The auto-warmup plan associated with the IP. Can be null if no warmup plan is assigned. | [optional] 
 
 ## Example
 
 ```python
-from sendpost_python_sdk.models.ip import IP
+from sendpost-python-sdk.models.ip import IP
 
 # TODO update the JSON string below
 json = "{}"

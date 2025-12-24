@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.aggregate_stats import AggregateStats
+from sendpost-python-sdk.models.aggregate_stats import AggregateStats
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.create_suppression_request_hard_bounce_inner import CreateSuppressionRequestHardBounceInner
+from sendpost-python-sdk.models.create_suppression_request_hard_bounce_inner import CreateSuppressionRequestHardBounceInner
 
 # TODO update the JSON string below
 json = "{}"

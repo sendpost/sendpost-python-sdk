@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.smtp_auth import SMTPAuth
+from sendpost-python-sdk.models.smtp_auth import SMTPAuth
 
 # TODO update the JSON string below
 json = "{}"

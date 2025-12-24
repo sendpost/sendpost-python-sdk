@@ -1,4 +1,4 @@
-# sendpost_python_sdk.MessageApi
+# sendpost-python-sdk.MessageApi
 
 All URIs are relative to *https://api.sendpost.io/api/v1*
 
@@ -19,14 +19,14 @@ Retrieve detailed information about a specific message by its ID.
 * Api Key Authentication (accountAuth):
 
 ```python
-import sendpost_python_sdk
-from sendpost_python_sdk.models.message import Message
-from sendpost_python_sdk.rest import ApiException
+import sendpost-python-sdk
+from sendpost-python-sdk.models.message import Message
+from sendpost-python-sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.sendpost.io/api/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sendpost_python_sdk.Configuration(
+configuration = sendpost-python-sdk.Configuration(
     host = "https://api.sendpost.io/api/v1"
 )
 
@@ -42,9 +42,9 @@ configuration.api_key['accountAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['accountAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with sendpost_python_sdk.ApiClient(configuration) as api_client:
+with sendpost-python-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sendpost_python_sdk.MessageApi(api_client)
+    api_instance = sendpost-python-sdk.MessageApi(api_client)
     message_id = 'message_id_example' # str | The ID of the message to retrieve.
 
     try:

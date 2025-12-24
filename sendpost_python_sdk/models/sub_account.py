@@ -19,6 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
+from sendpost_python_sdk.models.label import Label
 from sendpost_python_sdk.models.smtp_auth import SMTPAuth
 from typing import Optional, Set
 from typing_extensions import Self
@@ -30,7 +31,7 @@ class SubAccount(BaseModel):
     id: Optional[StrictInt] = Field(default=None, description="Unique ID for the sub-account.")
     api_key: Optional[StrictStr] = Field(default=None, description="API key for the sub-account.", alias="apiKey")
     name: Optional[StrictStr] = Field(default=None, description="Name of the sub-account.")
-    labels: Optional[List[StrictStr]] = Field(default=None, description="Labels associated with the sub-account")
+    labels: Optional[List[Label]] = Field(default=None, description="Labels associated with the sub-account")
     smtp_auths: Optional[List[SMTPAuth]] = Field(default=None, description="SMTP Auths associated with the sub-account", alias="smtpAuths")
     type: Optional[StrictInt] = Field(default=None, description="Type of the sub-account")
     is_plus: Optional[StrictBool] = Field(default=None, description="Indicates whether the sub-account is a Plus sub-account", alias="isPlus")
@@ -94,6 +95,13 @@ class SubAccount(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in labels (list)
+        _items = []
+        if self.labels:
+            for _item_labels in self.labels:
+                if _item_labels:
+                    _items.append(_item_labels.to_dict())
+            _dict['labels'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in smtp_auths (list)
         _items = []
         if self.smtp_auths:
@@ -116,7 +124,7 @@ class SubAccount(BaseModel):
             "id": obj.get("id"),
             "apiKey": obj.get("apiKey"),
             "name": obj.get("name"),
-            "labels": obj.get("labels"),
+            "labels": [Label.from_dict(_item) for _item in obj["labels"]] if obj.get("labels") is not None else None,
             "smtpAuths": [SMTPAuth.from_dict(_item) for _item in obj["smtpAuths"]] if obj.get("smtpAuths") is not None else None,
             "type": obj.get("type"),
             "isPlus": obj.get("isPlus"),

@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sendpost_python_sdk.models.third_party_sending_provider import ThirdPartySendingProvider
+from sendpost-python-sdk.models.third_party_sending_provider import ThirdPartySendingProvider
 
 # TODO update the JSON string below
 json = "{}"
