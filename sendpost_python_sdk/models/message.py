@@ -21,6 +21,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, Strict
 from typing import Any, ClassVar, Dict, List, Optional
 from sendpost_python_sdk.models.message_header_to import MessageHeaderTo
 from sendpost_python_sdk.models.message_to import MessageTo
+from sendpost_python_sdk.models.person import Person
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -37,8 +38,8 @@ class Message(BaseModel):
     local_ip: Optional[StrictStr] = Field(default=None, description="Local IP address used for sending the message.", alias="localIP")
     email_type: Optional[StrictStr] = Field(default=None, description="Type of email service used.", alias="emailType")
     submitted_at: Optional[StrictInt] = Field(default=None, description="UNIX epoch nano timestamp when message was submitted.", alias="submittedAt")
-    var_from: Optional[Dict[str, Any]] = Field(default=None, description="Object comprising name and email address of the sender", alias="from")
-    reply_to: Optional[Dict[str, Any]] = Field(default=None, description="Object comprising name and email addresses to which email replies will go to", alias="replyTo")
+    var_from: Optional[Person] = Field(default=None, description="Object comprising name and email address of the sender", alias="from")
+    reply_to: Optional[Person] = Field(default=None, description="Object comprising name and email addresses to which email replies will go to", alias="replyTo")
     to: Optional[MessageTo] = None
     header_to: Optional[MessageHeaderTo] = Field(default=None, alias="headerTo")
     header_cc: Optional[List[StrictStr]] = Field(default=None, description="List of CC recipients from email headers", alias="headerCc")

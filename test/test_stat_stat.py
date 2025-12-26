@@ -1,7 +1,5 @@
 # coding: utf-8
 
-# flake8: noqa
-
 """
     SendPost API
 
@@ -14,99 +12,50 @@
 """  # noqa: E501
 
 
-__version__ = "2.0.0"
+import unittest
 
-# import apis into sdk package
-from sendpost_python_sdk.api.domain_api import DomainApi
-from sendpost_python_sdk.api.email_api import EmailApi
-from sendpost_python_sdk.api.ip_api import IPApi
-from sendpost_python_sdk.api.ip_pools_api import IPPoolsApi
-from sendpost_python_sdk.api.message_api import MessageApi
-from sendpost_python_sdk.api.stats_api import StatsApi
-from sendpost_python_sdk.api.stats_a_api import StatsAApi
-from sendpost_python_sdk.api.sub_account_api import SubAccountApi
-from sendpost_python_sdk.api.suppression_api import SuppressionApi
-from sendpost_python_sdk.api.webhook_api import WebhookApi
-
-# import ApiClient
-from sendpost_python_sdk.api_response import ApiResponse
-from sendpost_python_sdk.api_client import ApiClient
-from sendpost_python_sdk.configuration import Configuration
-from sendpost_python_sdk.exceptions import OpenApiException
-from sendpost_python_sdk.exceptions import ApiTypeError
-from sendpost_python_sdk.exceptions import ApiValueError
-from sendpost_python_sdk.exceptions import ApiKeyError
-from sendpost_python_sdk.exceptions import ApiAttributeError
-from sendpost_python_sdk.exceptions import ApiException
-
-# import models into sdk package
-from sendpost_python_sdk.models.account_stats import AccountStats
-from sendpost_python_sdk.models.account_stats_stat import AccountStatsStat
-from sendpost_python_sdk.models.aggregate_stat import AggregateStat
-from sendpost_python_sdk.models.aggregate_stats import AggregateStats
-from sendpost_python_sdk.models.aggregated_email_stats import AggregatedEmailStats
-from sendpost_python_sdk.models.attachment import Attachment
-from sendpost_python_sdk.models.auto_warmup_plan import AutoWarmupPlan
-from sendpost_python_sdk.models.copy_to import CopyTo
-from sendpost_python_sdk.models.create_domain_request import CreateDomainRequest
-from sendpost_python_sdk.models.create_sub_account_request import CreateSubAccountRequest
-from sendpost_python_sdk.models.create_suppression_request import CreateSuppressionRequest
-from sendpost_python_sdk.models.create_suppression_request_hard_bounce_inner import CreateSuppressionRequestHardBounceInner
-from sendpost_python_sdk.models.create_suppression_request_manual_inner import CreateSuppressionRequestManualInner
-from sendpost_python_sdk.models.create_suppression_request_spam_complaint_inner import CreateSuppressionRequestSpamComplaintInner
-from sendpost_python_sdk.models.create_suppression_request_unsubscribe_inner import CreateSuppressionRequestUnsubscribeInner
-from sendpost_python_sdk.models.create_webhook_request import CreateWebhookRequest
-from sendpost_python_sdk.models.delete_response import DeleteResponse
-from sendpost_python_sdk.models.delete_sub_account_response import DeleteSubAccountResponse
-from sendpost_python_sdk.models.delete_suppression200_response_inner import DeleteSuppression200ResponseInner
-from sendpost_python_sdk.models.delete_suppression_request import DeleteSuppressionRequest
-from sendpost_python_sdk.models.delete_webhook_response import DeleteWebhookResponse
-from sendpost_python_sdk.models.device import Device
-from sendpost_python_sdk.models.domain import Domain
-from sendpost_python_sdk.models.domain_dkim import DomainDkim
-from sendpost_python_sdk.models.domain_dmarc import DomainDmarc
-from sendpost_python_sdk.models.domain_gpt import DomainGpt
-from sendpost_python_sdk.models.domain_return_path import DomainReturnPath
-from sendpost_python_sdk.models.domain_track import DomainTrack
-from sendpost_python_sdk.models.eip import EIP
-from sendpost_python_sdk.models.email_address import EmailAddress
-from sendpost_python_sdk.models.email_message import EmailMessage
-from sendpost_python_sdk.models.email_message_from import EmailMessageFrom
-from sendpost_python_sdk.models.email_message_object import EmailMessageObject
-from sendpost_python_sdk.models.email_message_reply_to import EmailMessageReplyTo
-from sendpost_python_sdk.models.email_message_to_inner import EmailMessageToInner
-from sendpost_python_sdk.models.email_message_to_inner_bcc_inner import EmailMessageToInnerBccInner
-from sendpost_python_sdk.models.email_message_to_inner_cc_inner import EmailMessageToInnerCcInner
-from sendpost_python_sdk.models.email_message_with_template import EmailMessageWithTemplate
-from sendpost_python_sdk.models.email_response import EmailResponse
-from sendpost_python_sdk.models.email_stats import EmailStats
-from sendpost_python_sdk.models.email_stats_stats import EmailStatsStats
-from sendpost_python_sdk.models.event import Event
-from sendpost_python_sdk.models.event_metadata import EventMetadata
-from sendpost_python_sdk.models.geo_location import GeoLocation
-from sendpost_python_sdk.models.ip import IP
-from sendpost_python_sdk.models.ip_allocation_request import IPAllocationRequest
-from sendpost_python_sdk.models.ip_deletion_response import IPDeletionResponse
-from sendpost_python_sdk.models.ip_pool import IPPool
-from sendpost_python_sdk.models.ip_pool_create_request import IPPoolCreateRequest
-from sendpost_python_sdk.models.ip_pool_delete_response import IPPoolDeleteResponse
-from sendpost_python_sdk.models.ip_pool_update_request import IPPoolUpdateRequest
-from sendpost_python_sdk.models.ip_update_request import IPUpdateRequest
-from sendpost_python_sdk.models.label import Label
-from sendpost_python_sdk.models.member import Member
-from sendpost_python_sdk.models.message import Message
-from sendpost_python_sdk.models.message_header_to import MessageHeaderTo
-from sendpost_python_sdk.models.message_to import MessageTo
-from sendpost_python_sdk.models.operating_system import OperatingSystem
-from sendpost_python_sdk.models.person import Person
-from sendpost_python_sdk.models.recipient import Recipient
-from sendpost_python_sdk.models.smtp_auth import SMTPAuth
-from sendpost_python_sdk.models.stat import Stat
 from sendpost_python_sdk.models.stat_stat import StatStat
-from sendpost_python_sdk.models.sub_account import SubAccount
-from sendpost_python_sdk.models.suppression import Suppression
-from sendpost_python_sdk.models.third_party_sending_provider import ThirdPartySendingProvider
-from sendpost_python_sdk.models.update_sub_account import UpdateSubAccount
-from sendpost_python_sdk.models.update_webhook import UpdateWebhook
-from sendpost_python_sdk.models.user_agent import UserAgent
-from sendpost_python_sdk.models.webhook import Webhook
+
+class TestStatStat(unittest.TestCase):
+    """StatStat unit test stubs"""
+
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def make_instance(self, include_optional) -> StatStat:
+        """Test StatStat
+            include_optional is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # uncomment below to create an instance of `StatStat`
+        """
+        model = StatStat()
+        if include_optional:
+            return StatStat(
+                processed = 225,
+                sent = 220,
+                delivered = 200,
+                dropped = 10,
+                smtp_dropped = 5,
+                hard_bounced = 10,
+                soft_bounced = 5,
+                opened = 150,
+                clicked = 130,
+                unsubscribed = 6,
+                spam = 2
+            )
+        else:
+            return StatStat(
+        )
+        """
+
+    def testStatStat(self):
+        """Test StatStat"""
+        # inst_req_only = self.make_instance(include_optional=False)
+        # inst_req_and_optional = self.make_instance(include_optional=True)
+
+if __name__ == '__main__':
+    unittest.main()

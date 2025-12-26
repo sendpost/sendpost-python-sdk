@@ -33,7 +33,10 @@ class IPPoolCreateRequest(BaseModel):
     routing_strategy: Optional[StrictInt] = Field(default=None, alias="routingStrategy")
     routing_meta_data: Optional[StrictStr] = Field(default=None, alias="routingMetaData")
     overflow_pool: Optional[StrictBool] = Field(default=None, alias="overflowPool")
-    __properties: ClassVar[List[str]] = ["name", "ips", "tpsps", "routingStrategy", "routingMetaData", "overflowPool"]
+    warmup_interval: Optional[StrictInt] = Field(default=None, description="Warmup interval in hours. Must be greater than 0.", alias="warmupInterval")
+    overflow_strategy: Optional[StrictInt] = Field(default=None, description="Overflow strategy (0 = None, 1 = Use overflow pool)", alias="overflowStrategy")
+    overflow_pool_name: Optional[StrictStr] = Field(default=None, description="Name of the overflow pool (required if overflowStrategy is 1)", alias="overflowPoolName")
+    __properties: ClassVar[List[str]] = ["name", "ips", "tpsps", "routingStrategy", "routingMetaData", "overflowPool", "warmupInterval", "overflowStrategy", "overflowPoolName"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -98,7 +101,10 @@ class IPPoolCreateRequest(BaseModel):
             "tpsps": obj.get("tpsps"),
             "routingStrategy": obj.get("routingStrategy"),
             "routingMetaData": obj.get("routingMetaData"),
-            "overflowPool": obj.get("overflowPool")
+            "overflowPool": obj.get("overflowPool"),
+            "warmupInterval": obj.get("warmupInterval"),
+            "overflowStrategy": obj.get("overflowStrategy"),
+            "overflowPoolName": obj.get("overflowPoolName")
         })
         return _obj
 

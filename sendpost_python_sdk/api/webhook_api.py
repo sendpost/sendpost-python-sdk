@@ -96,7 +96,7 @@ class WebhookApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "Webhook",
+            '200': "Webhook",
             '401': None,
             '403': None,
             '406': None,
@@ -167,7 +167,7 @@ class WebhookApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "Webhook",
+            '200': "Webhook",
             '401': None,
             '403': None,
             '406': None,
@@ -238,7 +238,7 @@ class WebhookApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "Webhook",
+            '200': "Webhook",
             '401': None,
             '403': None,
             '406': None,

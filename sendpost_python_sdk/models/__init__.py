@@ -76,7 +76,7 @@ from sendpost_python_sdk.models.person import Person
 from sendpost_python_sdk.models.recipient import Recipient
 from sendpost_python_sdk.models.smtp_auth import SMTPAuth
 from sendpost_python_sdk.models.stat import Stat
-from sendpost_python_sdk.models.stat_stats import StatStats
+from sendpost_python_sdk.models.stat_stat import StatStat
 from sendpost_python_sdk.models.sub_account import SubAccount
 from sendpost_python_sdk.models.suppression import Suppression
 from sendpost_python_sdk.models.third_party_sending_provider import ThirdPartySendingProvider

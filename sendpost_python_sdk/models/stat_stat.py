@@ -1,7 +1,5 @@
 # coding: utf-8
 
-# flake8: noqa
-
 """
     SendPost API
 
@@ -14,99 +12,96 @@
 """  # noqa: E501
 
 
-__version__ = "2.0.0"
+from __future__ import annotations
+import pprint
+import re  # noqa: F401
+import json
 
-# import apis into sdk package
-from sendpost_python_sdk.api.domain_api import DomainApi
-from sendpost_python_sdk.api.email_api import EmailApi
-from sendpost_python_sdk.api.ip_api import IPApi
-from sendpost_python_sdk.api.ip_pools_api import IPPoolsApi
-from sendpost_python_sdk.api.message_api import MessageApi
-from sendpost_python_sdk.api.stats_api import StatsApi
-from sendpost_python_sdk.api.stats_a_api import StatsAApi
-from sendpost_python_sdk.api.sub_account_api import SubAccountApi
-from sendpost_python_sdk.api.suppression_api import SuppressionApi
-from sendpost_python_sdk.api.webhook_api import WebhookApi
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from typing import Any, ClassVar, Dict, List, Optional
+from typing import Optional, Set
+from typing_extensions import Self
 
-# import ApiClient
-from sendpost_python_sdk.api_response import ApiResponse
-from sendpost_python_sdk.api_client import ApiClient
-from sendpost_python_sdk.configuration import Configuration
-from sendpost_python_sdk.exceptions import OpenApiException
-from sendpost_python_sdk.exceptions import ApiTypeError
-from sendpost_python_sdk.exceptions import ApiValueError
-from sendpost_python_sdk.exceptions import ApiKeyError
-from sendpost_python_sdk.exceptions import ApiAttributeError
-from sendpost_python_sdk.exceptions import ApiException
+class StatStat(BaseModel):
+    """
+    Statistics data for the date
+    """ # noqa: E501
+    processed: Optional[StrictInt] = Field(default=None, description="Number of emails accepted by SendPost API.")
+    sent: Optional[StrictInt] = Field(default=None, description="Number of emails sent.")
+    delivered: Optional[StrictInt] = Field(default=None, description="Number of emails we were able to successfully deliver at SMTP without encountering any error")
+    dropped: Optional[StrictInt] = Field(default=None, description="Number of emails drop without attempting to deliver either because the email is invalid or email in in existing suppression list")
+    smtp_dropped: Optional[StrictInt] = Field(default=None, description="Number of emails dropped by SMTP.", alias="smtpDropped")
+    hard_bounced: Optional[StrictInt] = Field(default=None, description="Number of emails where we got SMTP hard bounce error code by the recipient mail provider", alias="hardBounced")
+    soft_bounced: Optional[StrictInt] = Field(default=None, description="Number of emails where we got temporary soft bounce error by the recipent mail provider. Soft bounced emails are retried upto 5 times over 24 hour period before marking them as hardBounced.", alias="softBounced")
+    opened: Optional[StrictInt] = Field(default=None, description="Number of emails opened by recipients")
+    clicked: Optional[StrictInt] = Field(default=None, description="Number of email links clicked by recipients")
+    unsubscribed: Optional[StrictInt] = Field(default=None, description="Number of email recipients who unsubscribed from receiving further emails")
+    spam: Optional[StrictInt] = Field(default=None, description="Number of email recipients who marked emails as spam")
+    __properties: ClassVar[List[str]] = ["processed", "sent", "delivered", "dropped", "smtpDropped", "hardBounced", "softBounced", "opened", "clicked", "unsubscribed", "spam"]
 
-# import models into sdk package
-from sendpost_python_sdk.models.account_stats import AccountStats
-from sendpost_python_sdk.models.account_stats_stat import AccountStatsStat
-from sendpost_python_sdk.models.aggregate_stat import AggregateStat
-from sendpost_python_sdk.models.aggregate_stats import AggregateStats
-from sendpost_python_sdk.models.aggregated_email_stats import AggregatedEmailStats
-from sendpost_python_sdk.models.attachment import Attachment
-from sendpost_python_sdk.models.auto_warmup_plan import AutoWarmupPlan
-from sendpost_python_sdk.models.copy_to import CopyTo
-from sendpost_python_sdk.models.create_domain_request import CreateDomainRequest
-from sendpost_python_sdk.models.create_sub_account_request import CreateSubAccountRequest
-from sendpost_python_sdk.models.create_suppression_request import CreateSuppressionRequest
-from sendpost_python_sdk.models.create_suppression_request_hard_bounce_inner import CreateSuppressionRequestHardBounceInner
-from sendpost_python_sdk.models.create_suppression_request_manual_inner import CreateSuppressionRequestManualInner
-from sendpost_python_sdk.models.create_suppression_request_spam_complaint_inner import CreateSuppressionRequestSpamComplaintInner
-from sendpost_python_sdk.models.create_suppression_request_unsubscribe_inner import CreateSuppressionRequestUnsubscribeInner
-from sendpost_python_sdk.models.create_webhook_request import CreateWebhookRequest
-from sendpost_python_sdk.models.delete_response import DeleteResponse
-from sendpost_python_sdk.models.delete_sub_account_response import DeleteSubAccountResponse
-from sendpost_python_sdk.models.delete_suppression200_response_inner import DeleteSuppression200ResponseInner
-from sendpost_python_sdk.models.delete_suppression_request import DeleteSuppressionRequest
-from sendpost_python_sdk.models.delete_webhook_response import DeleteWebhookResponse
-from sendpost_python_sdk.models.device import Device
-from sendpost_python_sdk.models.domain import Domain
-from sendpost_python_sdk.models.domain_dkim import DomainDkim
-from sendpost_python_sdk.models.domain_dmarc import DomainDmarc
-from sendpost_python_sdk.models.domain_gpt import DomainGpt
-from sendpost_python_sdk.models.domain_return_path import DomainReturnPath
-from sendpost_python_sdk.models.domain_track import DomainTrack
-from sendpost_python_sdk.models.eip import EIP
-from sendpost_python_sdk.models.email_address import EmailAddress
-from sendpost_python_sdk.models.email_message import EmailMessage
-from sendpost_python_sdk.models.email_message_from import EmailMessageFrom
-from sendpost_python_sdk.models.email_message_object import EmailMessageObject
-from sendpost_python_sdk.models.email_message_reply_to import EmailMessageReplyTo
-from sendpost_python_sdk.models.email_message_to_inner import EmailMessageToInner
-from sendpost_python_sdk.models.email_message_to_inner_bcc_inner import EmailMessageToInnerBccInner
-from sendpost_python_sdk.models.email_message_to_inner_cc_inner import EmailMessageToInnerCcInner
-from sendpost_python_sdk.models.email_message_with_template import EmailMessageWithTemplate
-from sendpost_python_sdk.models.email_response import EmailResponse
-from sendpost_python_sdk.models.email_stats import EmailStats
-from sendpost_python_sdk.models.email_stats_stats import EmailStatsStats
-from sendpost_python_sdk.models.event import Event
-from sendpost_python_sdk.models.event_metadata import EventMetadata
-from sendpost_python_sdk.models.geo_location import GeoLocation
-from sendpost_python_sdk.models.ip import IP
-from sendpost_python_sdk.models.ip_allocation_request import IPAllocationRequest
-from sendpost_python_sdk.models.ip_deletion_response import IPDeletionResponse
-from sendpost_python_sdk.models.ip_pool import IPPool
-from sendpost_python_sdk.models.ip_pool_create_request import IPPoolCreateRequest
-from sendpost_python_sdk.models.ip_pool_delete_response import IPPoolDeleteResponse
-from sendpost_python_sdk.models.ip_pool_update_request import IPPoolUpdateRequest
-from sendpost_python_sdk.models.ip_update_request import IPUpdateRequest
-from sendpost_python_sdk.models.label import Label
-from sendpost_python_sdk.models.member import Member
-from sendpost_python_sdk.models.message import Message
-from sendpost_python_sdk.models.message_header_to import MessageHeaderTo
-from sendpost_python_sdk.models.message_to import MessageTo
-from sendpost_python_sdk.models.operating_system import OperatingSystem
-from sendpost_python_sdk.models.person import Person
-from sendpost_python_sdk.models.recipient import Recipient
-from sendpost_python_sdk.models.smtp_auth import SMTPAuth
-from sendpost_python_sdk.models.stat import Stat
-from sendpost_python_sdk.models.stat_stat import StatStat
-from sendpost_python_sdk.models.sub_account import SubAccount
-from sendpost_python_sdk.models.suppression import Suppression
-from sendpost_python_sdk.models.third_party_sending_provider import ThirdPartySendingProvider
-from sendpost_python_sdk.models.update_sub_account import UpdateSubAccount
-from sendpost_python_sdk.models.update_webhook import UpdateWebhook
-from sendpost_python_sdk.models.user_agent import UserAgent
-from sendpost_python_sdk.models.webhook import Webhook
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
+
+
+    def to_str(self) -> str:
+        """Returns the string representation of the model using alias"""
+        return pprint.pformat(self.model_dump(by_alias=True))
+
+    def to_json(self) -> str:
+        """Returns the JSON representation of the model using alias"""
+        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
+        return json.dumps(self.to_dict())
+
+    @classmethod
+    def from_json(cls, json_str: str) -> Optional[Self]:
+        """Create an instance of StatStat from a JSON string"""
+        return cls.from_dict(json.loads(json_str))
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Return the dictionary representation of the model using alias.
+
+        This has the following differences from calling pydantic's
+        `self.model_dump(by_alias=True)`:
+
+        * `None` is only added to the output dict for nullable fields that
+          were set at model initialization. Other fields with value `None`
+          are ignored.
+        """
+        excluded_fields: Set[str] = set([
+        ])
+
+        _dict = self.model_dump(
+            by_alias=True,
+            exclude=excluded_fields,
+            exclude_none=True,
+        )
+        return _dict
+
+    @classmethod
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
+        """Create an instance of StatStat from a dict"""
+        if obj is None:
+            return None
+
+        if not isinstance(obj, dict):
+            return cls.model_validate(obj)
+
+        _obj = cls.model_validate({
+            "processed": obj.get("processed"),
+            "sent": obj.get("sent"),
+            "delivered": obj.get("delivered"),
+            "dropped": obj.get("dropped"),
+            "smtpDropped": obj.get("smtpDropped"),
+            "hardBounced": obj.get("hardBounced"),
+            "softBounced": obj.get("softBounced"),
+            "opened": obj.get("opened"),
+            "clicked": obj.get("clicked"),
+            "unsubscribed": obj.get("unsubscribed"),
+            "spam": obj.get("spam")
+        })
+        return _obj
+
+
