@@ -31,6 +31,7 @@ docs/DomainDkim.md
 docs/DomainDmarc.md
 docs/DomainGpt.md
 docs/DomainReturnPath.md
+docs/DomainSpf.md
 docs/DomainTrack.md
 docs/EIP.md
 docs/EmailAddress.md
@@ -130,6 +131,7 @@ sendpost_python_sdk/models/domain_dkim.py
 sendpost_python_sdk/models/domain_dmarc.py
 sendpost_python_sdk/models/domain_gpt.py
 sendpost_python_sdk/models/domain_return_path.py
+sendpost_python_sdk/models/domain_spf.py
 sendpost_python_sdk/models/domain_track.py
 sendpost_python_sdk/models/eip.py
 sendpost_python_sdk/models/email_address.py
@@ -179,4 +181,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_domain_spf.py
 tox.ini

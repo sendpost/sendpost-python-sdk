@@ -21,6 +21,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, Strict
 from typing import Any, ClassVar, Dict, List, Optional
 from sendpost_python_sdk.models.auto_warmup_plan import AutoWarmupPlan
 from sendpost_python_sdk.models.domain import Domain
+from sendpost_python_sdk.models.label import Label
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -46,12 +47,27 @@ class IP(BaseModel):
     qq_settings: Optional[StrictStr] = Field(default=None, description="Configuration for QQ delivery settings in JSON format", alias="qqSettings")
     default_settings: Optional[StrictStr] = Field(default=None, description="Default delivery settings in JSON format", alias="defaultSettings")
     att_settings: Optional[StrictStr] = Field(default=None, description="Configuration for AT&T delivery settings in JSON format", alias="attSettings")
+    office365_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Office365 delivery settings in JSON format", alias="office365Settings")
+    googleworkspace_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Google Workspace delivery settings in JSON format", alias="googleworkspaceSettings")
+    proofpoint_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Proofpoint delivery settings in JSON format", alias="proofpointSettings")
+    mimecast_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Mimecast delivery settings in JSON format", alias="mimecastSettings")
+    barracuda_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Barracuda delivery settings in JSON format", alias="barracudaSettings")
+    ciscoironport_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Cisco IronPort delivery settings in JSON format", alias="ciscoironportSettings")
+    rackspace_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Rackspace delivery settings in JSON format", alias="rackspaceSettings")
+    zohobusiness_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Zoho Business delivery settings in JSON format", alias="zohobusinessSettings")
+    amazonworkmail_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Amazon WorkMail delivery settings in JSON format", alias="amazonworkmailSettings")
+    symantec_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Symantec delivery settings in JSON format", alias="symantecSettings")
+    fortinet_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Fortinet delivery settings in JSON format", alias="fortinetSettings")
+    sophos_settings: Optional[StrictStr] = Field(default=None, description="Configuration for Sophos delivery settings in JSON format", alias="sophosSettings")
+    trendmicro_settings: Optional[StrictStr] = Field(default=None, description="Configuration for TrendMicro delivery settings in JSON format", alias="trendmicroSettings")
+    checkpoint_settings: Optional[StrictStr] = Field(default=None, description="Configuration for CheckPoint delivery settings in JSON format", alias="checkpointSettings")
     created: StrictInt = Field(description="The timestamp (UNIX epoch) when the IP was created")
     infra_classification: Optional[StrictStr] = Field(default=None, description="Classification of the infrastructure", alias="infraClassification")
     infra_monitor: Optional[StrictBool] = Field(default=None, description="Indicates whether infrastructure monitoring is enabled", alias="infraMonitor")
     state: Optional[StrictInt] = Field(default=None, description="The state of the IP")
     auto_warmup_plan: Optional[AutoWarmupPlan] = Field(default=None, description="The auto-warmup plan associated with the IP. Can be null if no warmup plan is assigned.", alias="autoWarmupPlan")
-    __properties: ClassVar[List[str]] = ["id", "publicIP", "systemDomain", "reverseDNSHostname", "type", "gmailSettings", "yahooSettings", "aolSettings", "microsoftSettings", "comcastSettings", "yandexSettings", "gmxSettings", "mailruSettings", "icloudSettings", "zohoSettings", "qqSettings", "defaultSettings", "attSettings", "created", "infraClassification", "infraMonitor", "state", "autoWarmupPlan"]
+    labels: Optional[List[Label]] = Field(default=None, description="Labels associated with the IP")
+    __properties: ClassVar[List[str]] = ["id", "publicIP", "systemDomain", "reverseDNSHostname", "type", "gmailSettings", "yahooSettings", "aolSettings", "microsoftSettings", "comcastSettings", "yandexSettings", "gmxSettings", "mailruSettings", "icloudSettings", "zohoSettings", "qqSettings", "defaultSettings", "attSettings", "office365Settings", "googleworkspaceSettings", "proofpointSettings", "mimecastSettings", "barracudaSettings", "ciscoironportSettings", "rackspaceSettings", "zohobusinessSettings", "amazonworkmailSettings", "symantecSettings", "fortinetSettings", "sophosSettings", "trendmicroSettings", "checkpointSettings", "created", "infraClassification", "infraMonitor", "state", "autoWarmupPlan", "labels"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -98,6 +114,13 @@ class IP(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of auto_warmup_plan
         if self.auto_warmup_plan:
             _dict['autoWarmupPlan'] = self.auto_warmup_plan.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in labels (list)
+        _items = []
+        if self.labels:
+            for _item_labels in self.labels:
+                if _item_labels:
+                    _items.append(_item_labels.to_dict())
+            _dict['labels'] = _items
         return _dict
 
     @classmethod
@@ -128,11 +151,26 @@ class IP(BaseModel):
             "qqSettings": obj.get("qqSettings"),
             "defaultSettings": obj.get("defaultSettings"),
             "attSettings": obj.get("attSettings"),
+            "office365Settings": obj.get("office365Settings"),
+            "googleworkspaceSettings": obj.get("googleworkspaceSettings"),
+            "proofpointSettings": obj.get("proofpointSettings"),
+            "mimecastSettings": obj.get("mimecastSettings"),
+            "barracudaSettings": obj.get("barracudaSettings"),
+            "ciscoironportSettings": obj.get("ciscoironportSettings"),
+            "rackspaceSettings": obj.get("rackspaceSettings"),
+            "zohobusinessSettings": obj.get("zohobusinessSettings"),
+            "amazonworkmailSettings": obj.get("amazonworkmailSettings"),
+            "symantecSettings": obj.get("symantecSettings"),
+            "fortinetSettings": obj.get("fortinetSettings"),
+            "sophosSettings": obj.get("sophosSettings"),
+            "trendmicroSettings": obj.get("trendmicroSettings"),
+            "checkpointSettings": obj.get("checkpointSettings"),
             "created": obj.get("created"),
             "infraClassification": obj.get("infraClassification"),
             "infraMonitor": obj.get("infraMonitor"),
             "state": obj.get("state"),
-            "autoWarmupPlan": AutoWarmupPlan.from_dict(obj["autoWarmupPlan"]) if obj.get("autoWarmupPlan") is not None else None
+            "autoWarmupPlan": AutoWarmupPlan.from_dict(obj["autoWarmupPlan"]) if obj.get("autoWarmupPlan") is not None else None,
+            "labels": [Label.from_dict(_item) for _item in obj["labels"]] if obj.get("labels") is not None else None
         })
         return _obj
 

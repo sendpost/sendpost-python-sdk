@@ -17,45 +17,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from sendpost_python_sdk.models.domain_dkim import DomainDkim
-from sendpost_python_sdk.models.domain_dmarc import DomainDmarc
-from sendpost_python_sdk.models.domain_gpt import DomainGpt
-from sendpost_python_sdk.models.domain_return_path import DomainReturnPath
-from sendpost_python_sdk.models.domain_spf import DomainSpf
-from sendpost_python_sdk.models.domain_track import DomainTrack
 from typing import Optional, Set
 from typing_extensions import Self
 
-class Domain(BaseModel):
+class DomainSpf(BaseModel):
     """
-    Domain
+    SPF record host, type and value
     """ # noqa: E501
-    id: Optional[StrictInt] = Field(default=None, description="Unique ID for the domain.")
-    name: Optional[StrictStr] = Field(default=None, description="Name of the domain.")
-    dkim: Optional[DomainDkim] = None
-    spf: Optional[DomainSpf] = None
-    return_path: Optional[DomainReturnPath] = Field(default=None, alias="returnPath")
-    track: Optional[DomainTrack] = None
-    dmarc: Optional[DomainDmarc] = None
-    dkim_config: Optional[StrictStr] = Field(default=None, description="DKIM configuration", alias="dkimConfig")
-    dkim_verified: Optional[StrictBool] = Field(default=None, description="Status of DKIM verification ( true or false )", alias="dkimVerified")
-    spf_verified: Optional[StrictBool] = Field(default=None, description="Status of SPF verification ( true or false )", alias="spfVerified")
-    mailbox_verified: Optional[StrictBool] = Field(default=None, description="Status of Mailbox verification ( true or false )", alias="mailboxVerified")
-    dmarc_verified: Optional[StrictBool] = Field(default=None, description="Status of DMARC verification ( true or false)", alias="dmarcVerified")
-    return_path_verified: Optional[StrictBool] = Field(default=None, description="Status of ReturnPath verification ( true or false )", alias="returnPathVerified")
-    track_verified: Optional[StrictBool] = Field(default=None, description="Status of Track verification ( true or false )", alias="trackVerified")
-    verified: Optional[StrictBool] = Field(default=None, description="Overall verification status of the domain")
-    domain_registered_date: Optional[StrictStr] = Field(default=None, description="Date when the domain was registered", alias="domainRegisteredDate")
-    created: Optional[StrictInt] = Field(default=None, description="UNIX epoch timestamp in nanoseconds.")
-    gpt_verified: Optional[StrictBool] = Field(default=None, description="Status of GPT verification ( true or false )", alias="gptVerified")
-    gpt: Optional[DomainGpt] = None
-    dmarc_failure_reason: Optional[StrictStr] = Field(default=None, description="Reason for DMARC verification failure", alias="dmarcFailureReason")
-    dkim_failure_reason: Optional[StrictStr] = Field(default=None, description="Reason for DKIM verification failure", alias="dkimFailureReason")
-    track_failure_reason: Optional[StrictStr] = Field(default=None, description="Reason for Track verification failure", alias="trackFailureReason")
-    return_path_failure_reason: Optional[StrictStr] = Field(default=None, description="Reason for ReturnPath verification failure", alias="returnPathFailureReason")
-    __properties: ClassVar[List[str]] = ["id", "name", "dkim", "spf", "returnPath", "track", "dmarc", "dkimConfig", "dkimVerified", "spfVerified", "mailboxVerified", "dmarcVerified", "returnPathVerified", "trackVerified", "verified", "domainRegisteredDate", "created", "gptVerified", "gpt", "dmarcFailureReason", "dkimFailureReason", "trackFailureReason", "returnPathFailureReason"]
+    host: Optional[StrictStr] = None
+    type: Optional[StrictStr] = None
+    text_value: Optional[StrictStr] = Field(default=None, alias="textValue")
+    __properties: ClassVar[List[str]] = ["host", "type", "textValue"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -75,7 +49,7 @@ class Domain(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of Domain from a JSON string"""
+        """Create an instance of DomainSpf from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -96,29 +70,11 @@ class Domain(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of dkim
-        if self.dkim:
-            _dict['dkim'] = self.dkim.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of spf
-        if self.spf:
-            _dict['spf'] = self.spf.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of return_path
-        if self.return_path:
-            _dict['returnPath'] = self.return_path.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of track
-        if self.track:
-            _dict['track'] = self.track.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of dmarc
-        if self.dmarc:
-            _dict['dmarc'] = self.dmarc.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of gpt
-        if self.gpt:
-            _dict['gpt'] = self.gpt.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of Domain from a dict"""
+        """Create an instance of DomainSpf from a dict"""
         if obj is None:
             return None
 
@@ -126,29 +82,9 @@ class Domain(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
-            "name": obj.get("name"),
-            "dkim": DomainDkim.from_dict(obj["dkim"]) if obj.get("dkim") is not None else None,
-            "spf": DomainSpf.from_dict(obj["spf"]) if obj.get("spf") is not None else None,
-            "returnPath": DomainReturnPath.from_dict(obj["returnPath"]) if obj.get("returnPath") is not None else None,
-            "track": DomainTrack.from_dict(obj["track"]) if obj.get("track") is not None else None,
-            "dmarc": DomainDmarc.from_dict(obj["dmarc"]) if obj.get("dmarc") is not None else None,
-            "dkimConfig": obj.get("dkimConfig"),
-            "dkimVerified": obj.get("dkimVerified"),
-            "spfVerified": obj.get("spfVerified"),
-            "mailboxVerified": obj.get("mailboxVerified"),
-            "dmarcVerified": obj.get("dmarcVerified"),
-            "returnPathVerified": obj.get("returnPathVerified"),
-            "trackVerified": obj.get("trackVerified"),
-            "verified": obj.get("verified"),
-            "domainRegisteredDate": obj.get("domainRegisteredDate"),
-            "created": obj.get("created"),
-            "gptVerified": obj.get("gptVerified"),
-            "gpt": DomainGpt.from_dict(obj["gpt"]) if obj.get("gpt") is not None else None,
-            "dmarcFailureReason": obj.get("dmarcFailureReason"),
-            "dkimFailureReason": obj.get("dkimFailureReason"),
-            "trackFailureReason": obj.get("trackFailureReason"),
-            "returnPathFailureReason": obj.get("returnPathFailureReason")
+            "host": obj.get("host"),
+            "type": obj.get("type"),
+            "textValue": obj.get("textValue")
         })
         return _obj
 

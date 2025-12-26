@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 
 # import apis into sdk package
 from sendpost_python_sdk.api.domain_api import DomainApi
@@ -67,6 +67,7 @@ from sendpost_python_sdk.models.domain_dkim import DomainDkim
 from sendpost_python_sdk.models.domain_dmarc import DomainDmarc
 from sendpost_python_sdk.models.domain_gpt import DomainGpt
 from sendpost_python_sdk.models.domain_return_path import DomainReturnPath
+from sendpost_python_sdk.models.domain_spf import DomainSpf
 from sendpost_python_sdk.models.domain_track import DomainTrack
 from sendpost_python_sdk.models.eip import EIP
 from sendpost_python_sdk.models.email_address import EmailAddress
